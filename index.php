@@ -3,13 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shores of Glenwood</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Shores of Glenwood</title>
 	<link href='https://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/foundation.css" />
-    <link rel="stylesheet" href="css/app.css" />
-  	<script type="text/javascript" src="js/menu.js"></script>
+	<link rel="stylesheet" href="css/foundation.css" />
+	<link rel="stylesheet" href="css/app.css" />
+	<link rel="stylesheet" href="css/styles.css">    
+	<link rel="stylesheet" href="css/weather-style.css">
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   </head>
   <body>
 
@@ -51,27 +54,23 @@
 				
 				<!-- Using picturefill, load different pictures depending on the width of the screen
 				This picture is in the upper left hand corner of the main section under the <h2> title... -->
-				<picture class="first_main_pic">
-					<!--[if IE 9]><video style="display: none;"><![endif]-->
-					<source srcset="images/sog-entrance-drive-orig-350.jpg" media="(min-width: 1050px)">
-					<source srcset="images/sog-entrance-drive-orig-250.jpg" media="(min-width: 768px) and (max-width: 1049px) ">
-					<source srcset="images/sog-entrance-drive-orig-200.jpg" media="(min-width: 480px) and (max-width: 767px) ">
-					<!--[if IE 9]></video><![endif]-->
-					<img src="images/sog-entrance-drive-orig-350.jpg" alt="Drive into Our Neighborhood!">
-				</picture>
+				<div class="first_main_pic">
+					<img data-interchange="[img/sog-entrance-drive-orig-350.jpg, small], 
+						[img/sog-entrance-drive-orig-250.jpg, medium], 
+						[img/sog-entrance-drive-orig-350.jpg, large]">
+					<noscript><img src="img/sog-entrance-drive-orig-350.jpg"></noscript>
+				</div>
 
 				<p>This site contains information about our great community located in Commerce Township, Michigan. Shores of Glenwood is a highly esteemed neighborhood of homes set in a carefully preserved environment with majestic oak trees and evergreens, beautiful rolling hills, a few ponds, a gently flowing stream, and lots of natural wildlife.</p>
 				
 				<!-- Using picturefill, load different pictures depending on the width of the screen
 				This picture is in the lower right hand corner of the main section -->
-				<picture class="second_main_pic">
-					<!--[if IE 9]><video style="display: none;"><![endif]-->
-					<source srcset="images/sog-entrance-sign-250.jpg" media="(min-width: 1050px)">
-					<source srcset="images/sog-entrance-sign-200.jpg" media="(min-width: 768px) and (max-width: 1049px) ">
-					<source srcset="images/sog-entrance-sign-150.jpg" media="(min-width: 480px) and (max-width: 767px) ">
-					<!--[if IE 9]></video><![endif]-->
-					<img src="images/sog-entrance-sign.jpg" alt="Drive into Our Neighborhood!">
-				</picture>
+				<div class="second_main_pic">
+					<img data-interchange="[img/sog-entrance-sign-150.jpg, small], 
+						[img/sog-entrance-sign-200.jpg, medium], 
+						[img/sog-entrance-sign-250.jpg, large]">
+					<noscript><img src="img/sog-entrance-sign.jpg"></noscript>					
+				</div>
 
 				<p>We are an active community of families, young couples, empty-nesters, and other lively people who enjoy a peaceful atmosphere and close proximity to city attractions and water recreation areas.</p>
 
@@ -100,7 +99,7 @@
 				http://openweathermap.org/
 
 				Unfortunately, my city does not show up on the database so it chose the closest city to it... -->
-				<div class="weather-wrapper hide">
+				<div class="weather-wrapper">
 					<img src="#" class="weather-icon" alt="Weather Icon" />
 			
 					<p><strong>Place</strong><br>
@@ -151,7 +150,7 @@
 				sunsetTarget: '.weather-sunset',
 				placeTarget: '.weather-place',
 				iconTarget: '.weather-icon',
-				customIcons: '/images/icons/weather/',
+				customIcons: '/img/icons/weather/',
 				success: function() {
 				
 					//show weather
@@ -168,7 +167,7 @@
 		});
 	
 	</script>
-    <script src="js/vendor/jquery.min.js"></script>
+    <!--<script src="js/vendor/jquery.min.js"></script>-->
     <script src="js/vendor/what-input.min.js"></script>
     <script src="js/foundation.min.js"></script>
     <script src="js/app.js"></script>
