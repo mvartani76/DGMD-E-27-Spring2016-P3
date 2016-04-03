@@ -1,46 +1,52 @@
 <!doctype html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Shores of Glenwood</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href='https://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>	
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shores of Glenwood</title>
+	<link href='https://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/styles.css">
-	<link rel="stylesheet" href="css/weather-style.css">
-	<link rel="stylesheet" href="css/formstyle.css">
-	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<script type="text/javascript" src="js/menu.js"></script>	
-	<script>
-	    // Picture element HTML5 shiv
-	    document.createElement( "picture" );
-	</script>
-	<script src="js/picturefill.min.js" async></script>
-</head>
-<body>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/app.css" />
+  	<script type="text/javascript" src="js/menu.js"></script>
+  </head>
+  <body>
 	<div class="wrapper">
 		<div class="row">
-			<header class="col-4">
+			<header class="large-12 columns">
+				<img data-interchange="[img/sog-entrance-800.jpg, small], 
+					[img/sog-entrance-1000.jpg, medium], 
+					[img/sog-entrance-1200.jpg, large]">
+				<noscript><img src="img/sog-entrance-800.jpg.jpg"></noscript>
 			</header>
 		</div>
+
+		<div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="medium">
+			<button class="menu-icon" type="button" data-toggle></button>
+			<div class="title-bar-title">Menu</div>
+		</div>
+
 		<div class="row">
-			<div class="col-4 menu">
-				<ul class="active-toggle">
-					<li><a href="./index.php">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="./thingstodo.php">Things to Do</a></li>
-					<li><a href="./photogallery.php">Photo Gallery</a></li>
-					<li><a href="./login.php">Login</a></li>
-					<li><a href="./register.php">Register</a></li>					
-					<li class="active"><a href="./contact.php">Contact Us</a></li>
-				</ul>
-				<a class="toggle-nav" href="#">&#9776;</a>				
+			<!--<div class="menu large-12 columns">-->
+			<div class="top bar" id="nav-menu">
+				<div class="top-bar-left">
+					<!--<ul class="active-toggle">-->
+					<ul class="menu">
+						<li><a href="./index.php">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="./thingstodo.php">Things to Do</a></li>
+						<li><a href="./photogallery.php">Photo Gallery</a></li>
+						<li><a href="./login.php">Login</a></li>
+						<li><a href="./register.php">Register</a></li>					
+						<li class="active"><a href="./contact.php">Contact Us</a></li>
+					</ul>
+					<!--<a class="toggle-nav" href="#">&#9776;</a>-->				
+				</div>
 			</div>
 		</div>
 		<div class="row">
-			<main class="col-3" data-key="sameHeights">
+			<main class="large-8 columns" data-equalizer-watch>
 		  
 			  <form id="contact_id" method="post">
 			    <h3>Quick Contact</h3>
@@ -69,7 +75,7 @@
 			    </fieldset>
 			  </form>
 			</main>
-			<div class="col-1 outside-w-wrapper" data-key="sameHeights">
+			<div class="col-1 outside-w-wrapper" data-equalizer-watch>
 				<h3>Local Time &amp; Weather</h3>
 				<p>
 					<?php
@@ -122,7 +128,7 @@
 		</div>
 	</div>
 	<div class="row">
-	    <footer class="col-4">
+	    <footer class="large-12 columns">
 	    	<p>&copy; 2016 Shores of Glenwood Neighborhood Association </p>
 	    </footer>
 	</div>
@@ -172,6 +178,10 @@
 	        sameHeights();
 	    });
 	}
-	</script>		
+	</script>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/what-input.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/app.js"></script>			
 </body>
 </html>
