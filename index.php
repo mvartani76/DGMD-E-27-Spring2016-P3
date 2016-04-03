@@ -31,25 +31,20 @@
 			<div class="title-bar-title">Menu</div>
 		</div>
 		<div class="row">
-			<!--<div class="menu large-12 columns">-->
-			<div class="top bar" id="nav-menu">
-				<div class="top-bar-left">
-					<!--<ul class="active-toggle">-->
-					<ul class="menu">
-						<li class="active"><a href="./index.php">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="./thingstodo.php">Things to Do</a></li>
-						<li><a href="./photogallery.php">Photo Gallery</a></li>
-						<li><a href="./login.php">Login</a></li>
-						<li><a href="./register.php">Register</a></li>
-						<li><a href="./contact.php">Contact Us</a></li>
-					</ul>
-					<!--<a class="toggle-nav" href="#">&#9776;</a>-->
-				</div>
+			<div class="top-bar" id="nav-menu">
+				<ul class="menu expanded">
+					<li class="active"><a href="./index.php">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="./thingstodo.php">Things to Do</a></li>
+					<li><a href="./photogallery.php">Photo Gallery</a></li>
+					<li><a href="./login.php">Login</a></li>
+					<li><a href="./register.php">Register</a></li>
+					<li><a href="./contact.php">Contact Us</a></li>
+				</ul>
 			</div>
 		</div>
 		<div class="row">
-			<main class="large-8 columns">
+			<main class="large-9 columns">
 				<h2>Welcome to the Shores of Glenwood Neighborhood Association Website!</h2>
 				
 				<!-- Using picturefill, load different pictures depending on the width of the screen
@@ -75,7 +70,7 @@
 				<p>We are an active community of families, young couples, empty-nesters, and other lively people who enjoy a peaceful atmosphere and close proximity to city attractions and water recreation areas.</p>
 
 			</main>
-			<div class="outside-w-wrapper large-4 columns">
+			<div class="outside-w-wrapper large-3 columns">
 				<h3>Local Time &amp; Weather</h3>
 				<p>
 					<?php
