@@ -2604,6 +2604,18 @@ kbd {
     .button.alert:hover, .button.alert:focus {
       background-color: #da3116;
       color: #fefefe; }
+  .button.my-primary-background {
+    background-color: #EFECCA;
+    color: #fefefe; }
+    .button.my-primary-background:hover, .button.my-primary-background:focus {
+      background-color: #dbd486;
+      color: #fefefe; }
+  .button.my-secondary-background {
+    background-color: #ED8F00;
+    color: #fefefe; }
+    .button.my-secondary-background:hover, .button.my-secondary-background:focus {
+      background-color: #be7200;
+      color: #fefefe; }
   .button.hollow {
     border: 1px solid #2199e8;
     color: #2199e8; }
@@ -2642,6 +2654,18 @@ kbd {
       .button.hollow.alert:hover, .button.hollow.alert:focus {
         border-color: #881f0e;
         color: #881f0e; }
+    .button.hollow.my-primary-background {
+      border: 1px solid #EFECCA;
+      color: #EFECCA; }
+      .button.hollow.my-primary-background:hover, .button.hollow.my-primary-background:focus {
+        border-color: #a9a033;
+        color: #a9a033; }
+    .button.hollow.my-secondary-background {
+      border: 1px solid #ED8F00;
+      color: #ED8F00; }
+      .button.hollow.my-secondary-background:hover, .button.hollow.my-secondary-background:focus {
+        border-color: #774800;
+        color: #774800; }
   .button.disabled, .button[disabled] {
     opacity: 0.25;
     cursor: not-allowed;
@@ -2953,6 +2977,12 @@ select {
   .badge.alert {
     background: #ec5840;
     color: #fefefe; }
+  .badge.my-primary-background {
+    background: #EFECCA;
+    color: #0a0a0a; }
+  .badge.my-secondary-background {
+    background: #ED8F00;
+    color: #fefefe; }
 
 .breadcrumbs {
   list-style: none;
@@ -3068,6 +3098,18 @@ select {
     .button-group.alert .button:hover, .button-group.alert .button:focus {
       background-color: #da3116;
       color: #fefefe; }
+  .button-group.my-primary-background .button {
+    background-color: #EFECCA;
+    color: #0a0a0a; }
+    .button-group.my-primary-background .button:hover, .button-group.my-primary-background .button:focus {
+      background-color: #dbd486;
+      color: #0a0a0a; }
+  .button-group.my-secondary-background .button {
+    background-color: #ED8F00;
+    color: #fefefe; }
+    .button-group.my-secondary-background .button:hover, .button-group.my-secondary-background .button:focus {
+      background-color: #be7200;
+      color: #fefefe; }
   .button-group.stacked .button, .button-group.stacked-for-small .button, .button-group.stacked-for-medium .button {
     width: 100%; }
     .button-group.stacked .button:not(:last-child), .button-group.stacked-for-small .button:not(:last-child), .button-group.stacked-for-medium .button:not(:last-child) {
@@ -3111,6 +3153,10 @@ select {
     background-color: #fff3d9; }
   .callout.alert {
     background-color: #fce6e2; }
+  .callout.my-primary-background {
+    background-color: #fdfcf7; }
+  .callout.my-secondary-background {
+    background-color: #ffefd6; }
   .callout.small {
     padding-top: 0.5rem;
     padding-right: 0.5rem;
@@ -3235,7 +3281,7 @@ select {
     margin-left: 1rem; }
   .menu .active > a {
     color: #fefefe;
-    background: #2199e8; }
+    background: #ED8F00; }
 
 .menu-text {
   font-weight: bold;
@@ -3917,6 +3963,12 @@ select {
   .label.alert {
     background: #ec5840;
     color: #fefefe; }
+  .label.my-primary-background {
+    background: #EFECCA;
+    color: #0a0a0a; }
+  .label.my-secondary-background {
+    background: #ED8F00;
+    color: #fefefe; }
 
 .media-object {
   margin-bottom: 1rem;
@@ -4271,6 +4323,10 @@ body {
     background-color: #ffae00; }
   .progress.alert .progress-meter {
     background-color: #ec5840; }
+  .progress.my-primary-background .progress-meter {
+    background-color: #EFECCA; }
+  .progress.my-secondary-background .progress-meter {
+    background-color: #ED8F00; }
 
 .progress-meter {
   position: relative;
@@ -4856,7 +4912,7 @@ table.hover tr:nth-of-type(even):hover {
     clear: both; }
   .top-bar,
   .top-bar ul {
-    background-color: #e6e6e6; }
+    background-color: #ED8F00; }
   .top-bar input {
     width: 200px;
     margin-right: 1rem; }
