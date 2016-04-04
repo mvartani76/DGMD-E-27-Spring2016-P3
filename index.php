@@ -20,7 +20,7 @@
 
 		<!-- Replaced header with row div as this seems to allow the header image to stay
 			 adjacent to the menu when scaling to the different screen sizes. -->
-		<div class=" row xlarge-12 large-12 medium-12 columns">
+		<div class="row xlarge-12 large-12 medium-12 columns">
 			<img data-interchange="[img/sog-entrance-500.jpg, small], 
 				[img/sog-entrance-800.jpg, medium], 
 				[img/sog-entrance-1000.jpg, large], 
@@ -32,6 +32,7 @@
 			<button class="menu-icon" type="button" data-toggle></button>
 			<div class="title-bar-title">Menu</div>
 		</div>
+
 		<div class="row">
 			<div class="top-bar" id="nav-menu">
 				<ul class="menu expanded">
@@ -126,7 +127,7 @@
 		</div>
 	</div>
 	<div class="row">
-	    <footer class="xlarge-12 large-12 columns">
+	    <footer class="xlarge-12 large-12 medium-12 columns">
 	    	<p>&copy; 2016 Shores of Glenwood Neighborhood Association </p>
 	    </footer>
 	</div>
