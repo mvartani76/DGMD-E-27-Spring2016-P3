@@ -55,7 +55,7 @@
 			    		<fieldset><input placeholder="Username" id="login_username" name="username" type="text" tabindex="1" required autofocus></fieldset>
 			    		<fieldset><input placeholder="Password" id="login_userpassword" name="userpassword" type="password" tabindex="2" required></fieldset>
 			    		<fieldset>
-			      		<button name="submit" type="submit" id="login_id-submit" data-submit="...Sending">Submit</button>
+			      		<button name="submit" type="button" class="button my-secondary-background expanded" id="login_id-submit" data-submit="...Sending">Submit</button>
 			    		</fieldset>
 			  		</form>
 			</main>

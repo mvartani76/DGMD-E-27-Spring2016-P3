@@ -69,7 +69,7 @@
 				      <fieldset><input placeholder="Confirm Password" id="confirmuserpassword" name="confirmuserpassword" type="password" tabindex="15" required><span class="error"></span></fieldset>
 				    </div>
 				    <fieldset>
-				      <button name="submit" type="submit" id="register-submit" data-submit="...Sending">Submit</button>
+				      <button name="submit" type="button" class="button my-secondary-background expanded" id="register-submit" data-submit="...Sending">Submit</button>
 				    </fieldset>
 			  	</form>
 			</main>
