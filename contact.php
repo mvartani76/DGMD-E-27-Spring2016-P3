@@ -71,7 +71,7 @@
 			    <fieldset><label>End Time</label><input id="end_time" name="end_time" type="time" tabindex="12" value="23:59"></fieldset>
 			  </div>
 			    <fieldset>
-			      <button name="submit" type="button" class="button my-secondary-background expanded" id="contact-submit" data-submit="...Sending">Submit</button>
+			      <button name="submit" type="submit" class="button my-secondary-background expanded" id="contact-submit" data-submit="...Sending">Submit</button>
 			    </fieldset>
 			  </form>
 			</main>
