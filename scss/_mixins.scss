@@ -1,0 +1,123 @@
+// This mixin sets selected tag properties that are changed for different media queries
+// This mixin was created as there is a lot of repeated code
+@mixin set-selector-props($tag-prop, $base-header-font-size, $header-font-percentage-adjustment,
+								$base-header-line-height, $header-line-percentage-adjustment,
+								$base-value, $value-precentage-adjustment) {
+
+	@if $tag-prop == "h2" {
+		#{$tag-prop} {
+				font-size: scale-unit-value($base-header-font-size, $header-font-percentage-adjustment, 2);
+				line-height: scale-unit-value($base-header-line-height, $header-line-percentage-adjustment, 2);		
+				padding-left: scale-unit-value($base-value, $value-precentage-adjustment, 2);
+				padding-right: scale-unit-value($base-value, $value-precentage-adjustment, 2);
+		}
+	}
+	@else if $tag-prop == "p" {
+		#{$tag-prop} {
+				font-size: scale-unit-value($base-header-font-size, $header-font-percentage-adjustment, 2);
+				line-height: scale-unit-value($base-header-line-height, $header-line-percentage-adjustment, 2);		
+				margin-left: scale-unit-value($base-value, $value-precentage-adjustment, 2);
+				margin-right: scale-unit-value($base-value, $value-precentage-adjustment, 2);
+		}		
+	}
+
+}
+
+// This mixin sets img properties for different media queries
+// As the img tag props were different than the h2 and p tags, I created a separate mixin
+@mixin set-selector-img-props($padding-top-var, $padding-left-var, $padding-bottom-var, $margin-right-var) {
+	img {
+			padding-top: $padding-top-var;
+			padding-left: $padding-left-var;
+			padding-bottom: $padding-bottom-var;
+			margin-right: $margin-right-var;
+			float: left;
+		}
+}
+
+// This mixin sets the header background image, height, and width
+// The $header-img-file is input as a string so we need to remove the quotes using the built-in Sass function
+// unquote() in order for it to work with the url() function.
+@mixin set-header-img-height-width($header-img-file, $header-height, $header-width){
+		background: url(unquote($header-img-file)) no-repeat;
+		width: $header-width;
+		height: $header-height;
+}
+
+// Create Grid System Mixin
+// @param {$num-columns} - The number of equally spaced columns
+// Mixin uses a for loop to set the width (in percentage)
+@mixin create-grid-system($num-columns) {
+	@for $i from 1 through $num-columns {
+		.col-#{$i} {
+			width: percentage(($i / $num-columns));
+		}
+	}
+}
+
+// This mixin sets the font-size and padding properties
+// For the ul and a tags within the menu class
+@mixin set-menu-ul-a-props($font-size, $padding){
+	.menu ul a {
+		font-size: $font-size;
+		padding: $padding;
+	}
+
+}
+
+// This mixin sets the font size and centers h3
+// This mixin also scales the images within col-1-2-4 when the mouse hovers
+// over the image. Using the compass mixin, scale(), to do the scaling
+@mixin set-col-1-2-4-props($h3-font-size, $img-scale-x, $image-scale-y){
+
+	// Nesting the col-1-2-4 class
+	.col-1-2-4 {
+		h3 {
+			font-size: $h3-font-size;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		img:hover {
+			// Compass mixin that scales the images in the photogallery when hovering over the image
+			@include scale($img-scale-x,$image-scale-y);
+		}
+	}
+}
+
+// The set-footer mixin sets various parameters associated with the footer
+@mixin set-footer($footer-padding-top, $footer-padding-bottom, $footer-padding-left, $footer-padding-right,
+			$footer-margin-top, $footer-margin-bottom, $footer-margin-left, $footer-margin-right) {
+	footer {
+		clear: both;
+		padding: {
+			top: $footer-padding-top;
+			bottom: $footer-padding-bottom;
+			left: $footer-padding-left;
+			right: $footer-padding-right;
+		}
+		margin: {
+			top: $footer-margin-top;
+			bottom: $footer-margin-bottom;
+			left: $footer-margin-left;
+			right: $footer-margin-right;
+		}
+		color: $footer-text-color;
+		text-align: center;
+	}
+}
+
+// This mixin sets transitions of various parameters for a few different browser types
+@mixin transition($transition-variable, $transition-time, $transition-timing-function) {
+	-webkit-transition:$transition-variable $transition-time $transition-timing-function;
+	-moz-transition:$transition-variable $transition-time $transition-timing-function;
+	transition:$transition-variable $transition-time $transition-timing-function;     
+}
+
+// This mixin sets transitions of various parameters for a few different browser types
+// This mixin uses the compass mixins to accomplish this
+@mixin transition-compass($transition-variable, $transition-time, $transition-timing-function) {
+	@include transition-property($transition-variable);
+	@include transition-duration($transition-time);
+	@include transition-timing-function($transition-timing-function);
+}
