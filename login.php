@@ -14,7 +14,6 @@
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>    
   </head>
   <body>
-
 	<div class="wrapper">
 
 		<!-- Replaced header with row div as this seems to allow the header image to stay
