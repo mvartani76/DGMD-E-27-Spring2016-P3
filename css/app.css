@@ -5852,7 +5852,7 @@ table.hover tr:nth-of-type(even):hover {
 /* This is the stylesheet for the three form pages that are in this
    this website, namely login.php, register.php, and contact.php. */
 /* These are the form specific extends */
-#form-heading-color-extend, #contact_id h3, #login_id h3, #register_id h3, #contact_id h4, #login_id h4, #register_id h4 {
+#form-heading-color-extend, #contact_id-h3, #login_id-h3, #register_id-h3, #contact_id-h4, #login_id-h4, #register_id-h4 {
   color: #70482D;
   background-color: #F6F5E3; }
 
@@ -5867,7 +5867,7 @@ table.hover tr:nth-of-type(even):hover {
   margin: 0 0 5px;
   padding: 10px; }
 
-#form-display-margin-left-extend, #contact_id h3, #login_id h3, #register_id h3, #contact_id h4, #login_id h4, #register_id h4 {
+#form-display-margin-left-extend, #contact_id-h3, #login_id-h3, #register_id-h3, #contact_id-h4, #login_id-h4, #register_id-h4 {
   display: block;
   margin-left: 2%; }
 
@@ -5898,7 +5898,13 @@ table.hover tr:nth-of-type(even):hover {
   padding: 1%;
   margin: 2% 0; }
 
-#contact_id h3, #login_id h3, #register_id h3 {
+.login_id-background-color {
+  background-color: #F6F5E3; }
+
+.callout.alert p {
+  background-color: #fce6e2; }
+
+#contact_id-h3, #login_id-h3, #register_id-h3 {
   font-weight: 400; }
 
 #contact_id .centerh4, #contact_id input[type="time"] {

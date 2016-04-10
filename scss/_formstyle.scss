@@ -37,15 +37,25 @@
 	margin:2% 0;
 }
 
+.login_id-background-color {
+	background-color: $form-background-color;	
+}
+
+.callout.alert p {
+	// Use foundation mixin to set the background color
+	@include callout-style($input-background-invalid);
+}
+
+
 // Using extends to set similar params and observe DRY principles but keep h3 and h4 separate for my own sanity when looking the code over
-#contact_id h3, #login_id h3, #register_id h3 {
+#contact_id-h3, #login_id-h3, #register_id-h3 {
 	@extend #form-heading-color-extend;
 	@extend #form-display-margin-left-extend;
 	font-weight: 400;
 }
 
 // Using extends to set similar params and observe DRY principles but keep h3 and h4 separate for my own sanity when looking the code over
-#contact_id h4, #login_id h4, #register_id h4 {
+#contact_id-h4, #login_id-h4, #register_id-h4 {
 	@extend #form-heading-color-extend;
 	@extend #form-display-margin-left-extend;
 }

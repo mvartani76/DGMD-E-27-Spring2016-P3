@@ -47,14 +47,30 @@
 			</div>
 		</div>
 		<div class="row" data-equalizer>
-			<main class="xlarge-9 large-9 medium-9 columns" data-equalizer-watch>
+			<main class="xlarge-9 large-9 medium-9 columns login_id-background-color" data-equalizer-watch>
 		  
-			  		<form id="login_id" method="post">
-						<h3>Login</h3>
-			    		<h4>Please enter your username and password to login...</h4>
-			    		<fieldset><input placeholder="Username" id="login_username" name="username" type="text" tabindex="1" required autofocus></fieldset>
-			    		<fieldset><input placeholder="Password" id="login_userpassword" name="userpassword" type="password" tabindex="2" required></fieldset>
+			  		<form data-abide novalidate method="post">
+						<h3 id="login_id-h3" >Login</h3>
+			    		<h4 id="login_id-h4" >Please enter your username and password to login...</h4>
+			    		<fieldset><input type="text" placeholder="Username" id="login_username" name="username" tabindex="1" required>
+
+						<span class="form-error">
+							Username is required.
+						</span>
+						</fieldset>
+
+			    		<fieldset><input placeholder="Password" id="password" name="userpassword" type="password" tabindex="2" required>
+
+						<span class="form-error">
+							Password is required.
+						</span>
+
 			    		<fieldset>
+
+						<div data-abide-error class="alert callout" style="display: none;">
+							<p class="callout.alert"><i class="fi-alert"></i> There are some errors in your form.</p>
+						</div>
+
 			      		<button name="submit" type="submit" class="button my-secondary-background expanded" id="login_id-submit" data-submit="...Sending">Submit</button>
 			    		</fieldset>
 			  		</form>
