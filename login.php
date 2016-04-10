@@ -45,7 +45,7 @@
 			</div>
 		</div>
 		<div class="row" data-equalizer>
-			<main class="xlarge-9 large-9 medium-9 columns login_id-background-color" data-equalizer-watch>
+			<main class="xlarge-9 large-9 medium-9 small-12 columns login_id-background-color" data-equalizer-watch>
 		  
 			  		<form data-abide novalidate method="post">
 						<h3 id="login_id-h3" >Login</h3>

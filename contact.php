@@ -45,7 +45,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<main class="xlarge-9 large-9 medium-9 columns" data-equalizer-watch>
+			<main class="xlarge-9 large-9 medium-9 small-12 columns" data-equalizer-watch>
 		  
 			  <form id="contact_id" method="post">
 			    <h3>Quick Contact</h3>
