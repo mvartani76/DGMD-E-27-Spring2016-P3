@@ -47,9 +47,9 @@
 		<div class="row" data-equalizer>
 			<main class="xlarge-9 large-9 medium-9 small-12 columns login_id-background-color" data-equalizer-watch>
 		  
-			  		<form data-abide novalidate method="post">
-						<h3 id="login_id-h3" >Login</h3>
-			    		<h4 id="login_id-h4" >Please enter your username and password to login...</h4>
+			  		<form class="login_id" data-abide novalidate method="post">
+						<h3>Login</h3>
+			    		<h4>Please enter your username and password to login...</h4>
 			    		<fieldset><input type="text" placeholder="Username" id="login_username" name="username" tabindex="1" required>
 
 						<span class="form-error">
@@ -62,6 +62,7 @@
 						<span class="form-error">
 							Password is required.
 						</span>
+						</fieldset>
 
 			    		<fieldset>
 
