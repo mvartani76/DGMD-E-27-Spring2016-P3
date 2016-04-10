@@ -7,37 +7,37 @@
 @import "form_mixins";
 @import "form_extends";
 
-#contact_id input[type="text"],
-#contact_id input[type="email"],
-#contact_id input[type="tel"],
-#contact_id input[type="url"],
-#contact_id input[type="radio"],
-#contact_id input[type="time"],
-#contact_id textarea,
-#contact_id button[type="submit"],
-#login_id input[type="text"],
-#login_id textarea,
-#login_id button[type="submit"],
-#register_id input[type="text"],
-#register_id input[type="email"],
-#register_id input[type="tel"],
-#register_id input[type="url"],
-#register_id textarea {
+.contact_id input[type="text"],
+.contact_id input[type="email"],
+.contact_id input[type="tel"],
+.contact_id input[type="url"],
+.contact_id input[type="radio"],
+.contact_id input[type="time"],
+.contact_id textarea,
+.contact_id button[type="submit"],
+.login_id input[type="text"],
+.login_id textarea,
+.login_id button[type="submit"],
+.register_id input[type="text"],
+.register_id input[type="email"],
+.register_id input[type="tel"],
+.register_id input[type="url"],
+.register_id textarea {
 		font:400 1em/1.5em "Lato", Helvetica, Arial, sans-serif;
 		color: $form-primary-text-color;
 }
 
-#contact_id input[type="radio"] {
+.contact_id input[type="radio"] {
 	margin: 0 auto;
 }
 
-#contact_id, #login_id, #register_id {
+.contact_id, .login_id, .register_id {
 	background-color: $form-background-color;
 	padding:1%;
 	margin:2% 0;
 }
 
-.login_id-background-color {
+.login_id-background-color, .register_id-background-color {
 	background-color: $form-background-color;	
 }
 
@@ -48,72 +48,72 @@
 
 
 // Using extends to set similar params and observe DRY principles but keep h3 and h4 separate for my own sanity when looking the code over
-#contact_id-h3, #login_id-h3, #register_id-h3 {
+.contact_id h3, .login_id h3, .register_id h3 {
 	@extend #form-heading-color-extend;
 	@extend #form-display-margin-left-extend;
 	font-weight: 400;
 }
 
 // Using extends to set similar params and observe DRY principles but keep h3 and h4 separate for my own sanity when looking the code over
-#contact_id-h4, #login_id-h4, #register_id-h4 {
+.contact_id h4, .login_id h4, .register_id h4 {
 	@extend #form-heading-color-extend;
 	@extend #form-display-margin-left-extend;
 }
 
-#contact_id .centerh4, #contact_id input[type="time"] {
+.contact_id .centerh4, .contact_id input[type="time"] {
 	text-align: center;
 }
 
 // Set the fieldset parameters using a mixin
 @include set-form-fieldset;
 
-// Using extends to set parameters here as I want to group the #contact_id IDs together for my own sanity but still try to observe DRY principles
-#contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
-#contact_id input[type="time"], #contact_id textarea {
+// Using extends to set parameters here as I want to group the .contact_id IDs together for my own sanity but still try to observe DRY principles
+.contact_id input[type="text"], .contact_id input[type="email"], .contact_id input[type="tel"], .contact_id input[type="url"],
+.contact_id input[type="time"], .contact_id textarea {
 	@extend #form-input-border-color-extend;
 	@extend #form-width-margin-padding-extend;
 }
 
-// Using extends to set parameters here as I want to group the #login_id IDs together for my own sanity but still try to observe DRY principles
-#login_id input[type="text"], #login_id input[type="password"], #login_id textarea {
+// Using extends to set parameters here as I want to group the .login_id IDs together for my own sanity but still try to observe DRY principles
+.login_id input[type="text"], .login_id input[type="password"], .login_id textarea {
 	@extend #form-input-border-color-extend;
 	@extend #form-width-margin-padding-extend;
 }
 
-// Using extends to set parameters here as I want to group the #register_id IDs together for my own sanity but still try to observe DRY principles
-#register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"] {
+// Using extends to set parameters here as I want to group the .register_id IDs together for my own sanity but still try to observe DRY principles
+.register_id input[type="text"], .register_id input[type="email"], .register_id input[type="tel"], .register_id input[type="url"], .register_id input[type="password"] {
 	@extend #form-input-border-color-extend;
 	@extend #form-width-margin-padding-extend;
 }
 
-#contact_id input[type="text"]:hover, #contact_id input[type="email"]:hover, #contact_id input[type="tel"]:hover, #contact_id input[type="url"]:hover,
-#contact_id input[type="time"]:hover, #contact_id textarea:hover {
+.contact_id input[type="text"]:hover, .contact_id input[type="email"]:hover, .contact_id input[type="tel"]:hover, .contact_id input[type="url"]:hover,
+.contact_id input[type="time"]:hover, .contact_id textarea:hover {
 	// Using transition mixin to set the border-color transition for different browser types
 	@include transition(border-color, $form-border-color-transition-time, ease-in-out);
 	border-color: $form-border-color-hover;
 }
 
-#login_id input[type="text"]:hover, #login_id input[type="password"]:hover {
+.login_id input[type="text"]:hover, .login_id input[type="password"]:hover {
 	// Using transition mixin to set the border-color transition for different browser types
 	@include transition(border-color, $form-border-color-transition-time, ease-in-out);
 	border-color: $form-border-color-hover;
 }
 
-#register_id input[type="text"]:hover, #register_id input[type="email"]:hover, #register_id input[type="tel"]:hover, #register_id input[type="url"]:hover,
-#register_id input[type="password"]:hover {
+.register_id input[type="text"]:hover, .register_id input[type="email"]:hover, .register_id input[type="tel"]:hover, .register_id input[type="url"]:hover,
+.register_id input[type="password"]:hover {
 	// Using transition mixin to set the border-color transition for different browser types
 	@include transition(border-color, $form-border-color-transition-time, ease-in-out);
 	border-color: $form-border-color-hover;
 }
 
-#contact_id textarea, #login_id textarea {
+.contact_id textarea, .login_id textarea {
 	height:$form-textarea-height;
 	max-width:$form-textarea-max-width;
   	resize:none;
 }
 
 // Using extends to set parameters here as I want to group thebutton types together for my own sanity but still try to observe DRY principles
-#contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {
+.contact_id button[type="submit"], .login_id button[type="submit"], .register_id button[type="submit"] {
 	cursor:pointer;
 	border:none;
 	background-color: $form-button-background-color;
@@ -121,20 +121,20 @@
 	@extend #form-width-margin-padding-extend;
 }
 
-#contact_id button[type="submit"]:hover, #login_id button[type="submit"]:hover, #register_id button[type="submit"]:hover {
+.contact_id button[type="submit"]:hover, .login_id button[type="submit"]:hover, .register_id button[type="submit"]:hover {
 	background-color: $form-button-background-color-hover;
 	// Using transition mixin to set the background color transition for different browser types
 	@include transition(background-color, $form-border-color-transition-time, ease-in-out);
 }
 
-#contact_id button[type="submit"]:active, #login_id button[type="submit"]:active,
-#register_id button[type="submit"]:active {
+.contact_id button[type="submit"]:active, .login_id button[type="submit"]:active,
+.register_id button[type="submit"]:active {
 	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) inset;
 	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) inset;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) inset;
 }
 
-#register_id .form50, #contact_id .form50 {
+form .form50, form .form50 {
 	width: $form-form50-width;
     display: inline;
     float: left;
@@ -152,21 +152,21 @@
 /* Desktop Screen Sizes */
 /* Pixel Range: >= $min-desktop-width; */
 @media only screen and (min-width: $min-desktop-width) {
-	#contact_id h3, #login_id h3, #register_id h3 {
+	.contact_id h3, .login_id h3, .register_id h3 {
 		@include set-font-size-and-line-height(2.5em, 1.25em);
 	}
-	#contact_id h4, #login_id h4, #register_id h4 {
+	.contact_id h4, .login_id h4, .register_id h4 {
 		@include set-font-size-and-line-height(1.5em, 1.22em);
 	}
-	#register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"] {
+	.register_id input[type="text"], .register_id input[type="email"], .register_id input[type="tel"], .register_id input[type="url"], .register_id input[type="password"] {
 		// Since line-height is not set here, set the line-height parameter to "none"
 		@include set-font-size-and-line-height(1.1em, none);
 	}
-	#contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
-	#contact_id input[type="time"], #contact_id textarea {
+	.contact_id input[type="text"], .contact_id input[type="email"], .contact_id input[type="tel"], .contact_id input[type="url"],
+	.contact_id input[type="time"], .contact_id textarea {
 		@include set-form-var-input-parameters(1.1em, 95%, 0px, 0px, 5px, 10px);
 	}
-	#contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {			
+	.contact_id button[type="submit"], .login_id button[type="submit"], .register_id button[type="submit"] {			
 		// Since line-height is not set here, set the line-height parameter to "none"
 		@include set-font-size-and-line-height(1.6em, none);
 	}
@@ -175,21 +175,21 @@
 /* Tablet Screen Sizes */
 /* Pixel Range: >= $min-tablet-width; */
 @media only screen and (min-width: $min-tablet-width) and (max-width: $min-desktop-width - 1) {
-	#contact_id h3, #login_id h3, #register_id h3 {
+	.contact_id h3, .login_id h3, .register_id h3 {
 		@include set-font-size-and-line-height(2.3em, 1.22em);
 	}
-	#contact_id h4, #login_id h4, #register_id h4 {
+	.contact_id h4, .login_id h4, .register_id h4 {
 		@include set-font-size-and-line-height(1.3em, 1.21em);
 	}
-	#register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"] {
+	.register_id input[type="text"], .register_id input[type="email"], .register_id input[type="tel"], .register_id input[type="url"], .register_id input[type="password"] {
 		// Since line-height is not set here, set the line-height parameter to "none"
 		@include set-font-size-and-line-height(1em, none);
 	}
-	#contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
-	#contact_id input[type="time"], #contact_id textarea {
+	.contact_id input[type="text"], .contact_id input[type="email"], .contact_id input[type="tel"], .contact_id input[type="url"],
+	.contact_id input[type="time"], .contact_id textarea {
 		@include set-form-var-input-parameters(1em, 95%, 0px, 0px, 5px, 10px);
 	}
-	#contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {
+	.contact_id button[type="submit"], .login_id button[type="submit"], .register_id button[type="submit"] {
 		// Since line-height is not set here, set the line-height parameter to "none"
 		@include set-font-size-and-line-height(1.5em, none);
 	}
@@ -198,21 +198,21 @@
 /* Mobile Landscape Screen Sizes */
 /* pixel range: $min-phone-landscape-width-($min-tablet-width - 1) */
 @media only screen and (min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width - 1)  {
-	#contact_id h3, #login_id h3, #register_id h3 {
+	.contact_id h3, .login_id h3, .register_id h3 {
 		@include set-font-size-and-line-height(2.2em, 1.15em);
 	}
-	#contact_id h4, #login_id h4, #register_id h4 {
+	.contact_id h4, .login_id h4, .register_id h4 {
 		@include set-font-size-and-line-height(1.1em, 1.1em);
 	}
-	#register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"] {
+	.register_id input[type="text"], .register_id input[type="email"], .register_id input[type="tel"], .register_id input[type="url"], .register_id input[type="password"] {
 		// Since line-height is not set here, set the line-height parameter to "none"
 		@include set-font-size-and-line-height(0.95em, none);		
 	}
-	#contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
-	#contact_id input[type="time"], #contact_id textarea {
+	.contact_id input[type="text"], .contact_id input[type="email"], .contact_id input[type="tel"], .contact_id input[type="url"],
+	.contact_id input[type="time"], .contact_id textarea {
 		@include set-form-var-input-parameters(0.95em, 95%, 0px, 0px, 5px, 10px);
 	}
-	#contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {			
+	.contact_id button[type="submit"], .login_id button[type="submit"], .register_id button[type="submit"] {			
 		// Since line-height is not set here, set the line-height parameter to "none"
 		@include set-font-size-and-line-height(1.4em, none);		
 	}				
@@ -221,7 +221,7 @@
 /* Mobile portrait Screen Sizes */
 /* pixel range: <=($min-phone-landscape-width - 1) */
 @media only screen and (max-width: $min-phone-landscape-width - 1)  {
-	#register_id .form50, #contact_id .form50 {
+	form .form50, form .form50 {
 		width: $form-phone-portrait-width-form50-width;
 	    display: inline;
 	    float: left;
@@ -231,20 +231,20 @@
 	    	right: 2%;
 	    }
 	}
-	#contact_id h3, #login_id h3, #register_id h3 {
+	.contact_id h3, .login_id h3, .register_id h3 {
 		@include set-font-size-and-line-height(2em, 1.1em);		
 	}
-	#contact_id h4, #login_id h4, #register_id h4 {
+	.contact_id h4, .login_id h4, .register_id h4 {
 		@include set-font-size-and-line-height(1em, 1.05em);
 	}
-	#register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"] {
+	.register_id input[type="text"], .register_id input[type="email"], .register_id input[type="tel"], .register_id input[type="url"], .register_id input[type="password"] {
 		@include set-form-var-input-parameters(0.85em, 95%, 0px, 0px, 5px, 10px);
 	}
-	#contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
-	#contact_id input[type="time"], #contact_id textarea {
+	.contact_id input[type="text"], .contact_id input[type="email"], .contact_id input[type="tel"], .contact_id input[type="url"],
+	.contact_id input[type="time"], .contact_id textarea {
 		@include set-form-var-input-parameters(0.85em, 95%, 0px, 0px, 5px, 10px);
 	}
-	#contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {			
+	.contact_id button[type="submit"], .login_id button[type="submit"], .register_id button[type="submit"] {			
 		// Since line-height is not set here, set the line-height parameter to "none"
 		@include set-font-size-and-line-height(1.3em, none);
 	}				
