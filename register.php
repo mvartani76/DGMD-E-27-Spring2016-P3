@@ -46,9 +46,9 @@
 		</div>
 		<div class="row" data-equalizer>
 			<main class="xlarge-9 large-9 medium-9 small-12 columns register_id-background-color" data-equalizer-watch>
-				<form data-abide novalidate method="post">
-					<h3 id="register_id-h3">Registration</h3>
-				    <h4 id="register_id-h4">Please fill out the information below to register with the Shores of Glenwood site...</h4>
+				<form class="register_id" data-abide novalidate method="post">
+					<h3>Registration</h3>
+				    <h4>Please fill out the information below to register with the Shores of Glenwood site...</h4>
 				    <div class="form50">
 				      <fieldset><input placeholder="First Name" id="firstname" name="firstname" type="text" tabindex="1" required autofocus><span class="form-error">First Name is Required</span></fieldset>
 				      <fieldset><input placeholder="Last Name" id="lastname" name="lastname" type="text" tabindex="2" required><span class="form-error">Last Name is Required</span></fieldset>
