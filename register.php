@@ -45,29 +45,33 @@
 			</div>
 		</div>
 		<div class="row" data-equalizer>
-			<main class="xlarge-9 large-9 medium-9 columns" data-equalizer-watch>
-				<form id="register_id" method="post">
-					<h3>Registration</h3>
-				    <h4>Please fill out the information below to register with the Shores of Glenwood site...</h4>
+			<main class="xlarge-9 large-9 medium-9 small-12 columns register_id-background-color" data-equalizer-watch>
+				<form data-abide novalidate method="post">
+					<h3 id="register_id-h3">Registration</h3>
+				    <h4 id="register_id-h4">Please fill out the information below to register with the Shores of Glenwood site...</h4>
 				    <div class="form50">
-				      <fieldset><input placeholder="First Name" id="firstname" name="firstname" type="text" tabindex="1" required autofocus><span class="error"></span></fieldset>
-				      <fieldset><input placeholder="Last Name" id="lastname" name="lastname" type="text" tabindex="2" required><span class="error"></span></fieldset>
-				      <fieldset><input placeholder="Street Address 1" id="streetaddr1" name="streetaddr1" type="text" tabindex="3" required><span class="error"></span></fieldset>
+				      <fieldset><input placeholder="First Name" id="firstname" name="firstname" type="text" tabindex="1" required autofocus><span class="form-error">First Name is Required</span></fieldset>
+				      <fieldset><input placeholder="Last Name" id="lastname" name="lastname" type="text" tabindex="2" required><span class="form-error">Last Name is Required</span></fieldset>
+				      <fieldset><input placeholder="Street Address 1" id="streetaddr1" name="streetaddr1" type="text" tabindex="3" required><span class="form-error">Street Address is Required</span></fieldset>
 				      <fieldset><input placeholder="Street Address 2" id="streetaddr2" name="streetaddr2" type="text" tabindex="4"></fieldset>
-				      <fieldset><input placeholder="City" id="city" name="city" type="text" tabindex="5" required><span class="error"></span></fieldset>
-				      <fieldset><input placeholder="State/Province" id="state_prov" name="state_prov" type="text" tabindex="6" required><span class="error"></span></fieldset>
-				      <fieldset><input placeholder="Zip Code / Postal Code" id="zip_post_code" name="zip_post_code" type="text" tabindex="7" required><span class="error"></span></fieldset>
-				      <fieldset><input placeholder="Country" id="country" name="country" type="text" tabindex="8" required><span class="error"></span></fieldset>
+				      <fieldset><input placeholder="City" id="city" name="city" type="text" tabindex="5" required><span class="form-error">City is Required</span></fieldset>
+				      <fieldset><input placeholder="State/Province" id="state_prov" name="state_prov" type="text" tabindex="6" required><span class="form-error">State/Province is Required</span></fieldset>
+				      <fieldset><input placeholder="Zip Code / Postal Code" id="zip_post_code" name="zip_post_code" type="text" tabindex="7" required><span class="form-error">Zip Code / Postal Code is Required</span></fieldset>
+				      <fieldset><input placeholder="Country" id="country" name="country" type="text" tabindex="8" required><span class="form-error">Country is Required</span></fieldset>
 				    </div>
 				    <div class="form50">
-				      <fieldset><input placeholder="Your Email Address (minimum of 5 characters)" id="emailaddr" name="emailaddr" type="email" tabindex="9" required><span class="error"></span></fieldset>
-				      <fieldset><input placeholder="Confirm Email Address" id="confirmemailaddr" name="confirmemailaddr" type="email" tabindex="10" required><span class="error"></span></fieldset>
-				      <fieldset><input placeholder="Your Phone Number" id="phonenumber" name="phonenumber" type="tel" tabindex="11" required><span class="error"></span></fieldset>
-				      <fieldset><input placeholder="Desired Username" id="username" name="username" type="text" tabindex="13" required><span class="error"></span></fieldset>
-				      <fieldset><input placeholder="Password" id="userpassword" name="userpassword" type="password" tabindex="14" required><span class="error"></span></fieldset>
-				      <fieldset><input placeholder="Confirm Password" id="confirmuserpassword" name="confirmuserpassword" type="password" tabindex="15" required><span class="error"></span></fieldset>
+				      <fieldset><input placeholder="Your Email Address" id="emailaddr" name="emailaddr" type="email" tabindex="9" required><span class="form-error">Correct Email Address is Required</span></fieldset>
+				      <fieldset><input placeholder="Confirm Email Address" id="confirmemailaddr" name="confirmemailaddr" type="email" tabindex="10" required data-equalto="email"><span class="form-error">Emails do not Match</span></fieldset>
+				      <fieldset><input placeholder="Your Phone Number" id="phonenumber" name="phonenumber" type="tel" tabindex="11" required><span class="form-error">Phone Number is Required</span></fieldset>
+				      <fieldset><input placeholder="Desired Username" id="username" name="username" type="text" tabindex="13" required><span class="form-error">Username is Required</span></fieldset>
+				      <fieldset><input placeholder="Password" id="userpassword" name="userpassword" type="password" tabindex="14" required><span class="form-error">Password is Required</span></fieldset>
+				      <fieldset><input placeholder="Confirm Password" id="confirmuserpassword" name="confirmuserpassword" type="password" tabindex="15" required pattern="alpha_numeric" data-equalto="password">
+				      <span class="form-error">Passwords do not Match</span></fieldset>
 				    </div>
 				    <fieldset>
+						<div data-abide-error class="alert callout" style="display: none;">
+							<p class="callout.alert"><i class="fi-alert"></i> There are some errors in your form.</p>
+						</div>				    
 				      <button name="submit" type="submit" class="button my-secondary-background expanded" id="register-submit" data-submit="...Sending">Submit</button>
 				    </fieldset>
 			  	</form>
