@@ -6261,7 +6261,7 @@ footer {
   background-color: #FFF; }
 
 #form-width-margin-padding-extend, .contact_id input[type="text"], .contact_id input[type="email"], .contact_id input[type="tel"], .contact_id input[type="url"],
-.contact_id input[type="time"], .contact_id textarea, .login_id input[type="text"], .login_id input[type="password"], .login_id textarea, .register_id input[type="text"], .register_id input[type="email"], .register_id input[type="tel"], .register_id input[type="url"], .register_id input[type="password"], .contact_id button[type="submit"], .login_id button[type="submit"], .register_id button[type="submit"] {
+.contact_id input[type="time"], .contact_id textarea, .login_id input[type="text"], .login_id input[type="password"], .login_id textarea, .register_id input[type="text"], .register_id input[type="email"], .register_id input[type="tel"], .register_id input[type="url"], .register_id input[type="password"] {
   width: 100%;
   margin: 0 0 5px;
   padding: 10px; }
@@ -6277,10 +6277,8 @@ footer {
 .contact_id input[type="radio"],
 .contact_id input[type="time"],
 .contact_id textarea,
-.contact_id button[type="submit"],
 .login_id input[type="text"],
 .login_id textarea,
-.login_id button[type="submit"],
 .register_id input[type="text"],
 .register_id input[type="email"],
 .register_id input[type="tel"],
@@ -6337,20 +6335,6 @@ fieldset {
   height: 100px;
   max-width: 100%;
   resize: none; }
-
-.contact_id button[type="submit"], .login_id button[type="submit"], .register_id button[type="submit"] {
-  cursor: pointer;
-  border: none;
-  background-color: #ED8F00;
-  color: #FFF; }
-
-.contact_id button[type="submit"]:hover, .login_id button[type="submit"]:hover, .register_id button[type="submit"]:hover {
-  background-color: #B37518;
-  transition: background-color 0.3s ease-in-out; }
-
-.contact_id button[type="submit"]:active, .login_id button[type="submit"]:active,
-.register_id button[type="submit"]:active {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) inset; }
 
 form .form50, form .form50 {
   width: 46%;
