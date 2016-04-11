@@ -47,29 +47,56 @@
 		<div class="row">
 			<main class="xlarge-9 large-9 medium-9 small-12 columns" data-equalizer-watch>
 		  
-			  <form id="contact_id" method="post">
+			  <form class="contact_id" data-abide novalidate method="post">
 			    <h3>Quick Contact</h3>
 			    <h4>We would love to hear from you! Please contact us today, and get reply with in 24 hours!</h4>
-			    <fieldset><input placeholder="First Name" id="firstname" name="firstname" type="text" tabindex="1" required autofocus></fieldset>
-			    <fieldset><input placeholder="Last Name" id="lastname" name="lastname" type="text" tabindex="2" required></fieldset>
-			    <fieldset><input placeholder="Your Email Address" id="emailaddr" name="emailaddr" type="email" tabindex="3"></fieldset>
-			    <fieldset><input placeholder="Your Phone Number" id="phonenumber" name="phonenumber" type="tel" tabindex="4"></fieldset>
+			    <fieldset><input type="text" placeholder="First Name" id="firstname" name="firstname" tabindex="1" required>
+					<span class="form-error">
+						First Name is required.
+					</span>
+			    </fieldset>
+			    <fieldset><input type="text" placeholder="Last Name" id="lastname" name="lastname" tabindex="2" required>
+					<span class="form-error">
+						Last Name is required.
+					</span>
+			    </fieldset>
+			    <fieldset><input placeholder="Your Email Address" id="emailaddr" name="emailaddr" type="email" tabindex="3" required>
+					<span class="form-error">
+						Email Address is required.
+					</span>
+			    </fieldset>
+
+			    <fieldset><input placeholder="Your Phone Number" id="phonenumber" name="phonenumber" type="tel" tabindex="4" required>
+					<span class="form-error">
+						Phone Number is required.
+					</span>
+			    </fieldset>
+
 				<fieldset><h4>What type of message do you want to send?</h4>
 				    <input type="radio" id="dept1" name="dept" value="general" tabindex="6" checked> General
 				    <input type="radio" id="dept2" name="dept" value="dues" tabindex="7"> Dues
 				    <input type="radio" id="dept3" name="dept" value="complaint" tabindex="8"> Complaint
 				    <input type="radio" id="dept4" name="dept" value="technical" tabindex="9"> Technical
 				</fieldset>
+
 			    <fieldset><textarea placeholder="Type your Message Here...." tabindex="10" required></textarea>
+					<span class="form-error">
+						Please type your message.
+					</span>
 			    </fieldset>
 			    <h4 class="centerh4">Preferred time for phone contact...</h4>
 			    <div class="form50">
-			    <fieldset><label>Start Time</label><input id="start_time" name="start_time" type="time" tabindex="11" value="00:00"></fieldset>
-			  </div>
-			      <div class="form50">
-			    <fieldset><label>End Time</label><input id="end_time" name="end_time" type="time" tabindex="12" value="23:59"></fieldset>
-			  </div>
+			    	<fieldset><label>Start Time</label><input id="start_time" name="start_time" type="time" tabindex="11" value="00:00"></fieldset>
+			  	</div>
+				<div class="form50">
+			    	<fieldset><label>End Time</label><input id="end_time" name="end_time" type="time" tabindex="12" value="23:59"></fieldset>
+				</div>
 			    <fieldset>
+
+					<div data-abide-error class="alert callout" style="display: none;">
+						<p class="callout.alert"><i class="fi-alert"></i> There are some errors in your form.</p>
+					</div>
+
 			      <button name="submit" type="submit" class="button my-secondary-background expanded" id="contact-submit" data-submit="...Sending">Submit</button>
 			    </fieldset>
 			  </form>
