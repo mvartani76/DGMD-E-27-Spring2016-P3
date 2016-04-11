@@ -47,15 +47,15 @@
 
 // Using extends to set similar params and observe DRY principles but keep h3 and h4 separate for my own sanity when looking the code over
 .contact_id h3, .login_id h3, .register_id h3 {
-	@extend #form-heading-color-extend;
-	@extend #form-display-margin-left-extend;
+	@extend .form-heading-color-extend;
+	@extend .form-display-margin-left-extend;
 	font-weight: 400;
 }
 
 // Using extends to set similar params and observe DRY principles but keep h3 and h4 separate for my own sanity when looking the code over
 .contact_id h4, .login_id h4, .register_id h4 {
-	@extend #form-heading-color-extend;
-	@extend #form-display-margin-left-extend;
+	@extend .form-heading-color-extend;
+	@extend .form-display-margin-left-extend;
 }
 
 .contact_id .centerh4, .contact_id input[type="time"] {
@@ -68,20 +68,20 @@
 // Using extends to set parameters here as I want to group the .contact_id IDs together for my own sanity but still try to observe DRY principles
 .contact_id input[type="text"], .contact_id input[type="email"], .contact_id input[type="tel"], .contact_id input[type="url"],
 .contact_id input[type="time"], .contact_id textarea {
-	@extend #form-input-border-color-extend;
-	@extend #form-width-margin-padding-extend;
+	@extend .form-input-border-color-extend;
+	@extend .form-width-margin-padding-extend;
 }
 
 // Using extends to set parameters here as I want to group the .login_id IDs together for my own sanity but still try to observe DRY principles
 .login_id input[type="text"], .login_id input[type="password"], .login_id textarea {
-	@extend #form-input-border-color-extend;
-	@extend #form-width-margin-padding-extend;
+	@extend .form-input-border-color-extend;
+	@extend .form-width-margin-padding-extend;
 }
 
 // Using extends to set parameters here as I want to group the .register_id IDs together for my own sanity but still try to observe DRY principles
 .register_id input[type="text"], .register_id input[type="email"], .register_id input[type="tel"], .register_id input[type="url"], .register_id input[type="password"] {
-	@extend #form-input-border-color-extend;
-	@extend #form-width-margin-padding-extend;
+	@extend .form-input-border-color-extend;
+	@extend .form-width-margin-padding-extend;
 }
 
 .contact_id input[type="text"]:hover, .contact_id input[type="email"]:hover, .contact_id input[type="tel"]:hover, .contact_id input[type="url"]:hover,
