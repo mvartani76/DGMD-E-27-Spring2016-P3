@@ -1,0 +1,153 @@
+/* Stylesheet specific to the swapping of columns in thingstodo.php */
+
+@import "variables";
+@import "weather_variables";
+@import "thingstodo_variables";
+@import "thingstodo_mixins";
+
+// Nesting the aside tag
+aside {
+	background-color: $thingstodo-aside-background-color;
+
+	h3 {
+		font-family: 'Francois One', sans-serif;
+		color: $thingstodo-aside-heading-font-color;
+		text-align: center;
+	}
+
+	ul {
+		padding-left: $thingstodo-aside-padding-left;
+	}
+
+	li {
+		font-family: 'Lato', sans-serif;
+		color: $primary-light-text-color;
+	}
+
+	p {
+		font-family: 'Lato', sans-serif;
+		color: $primary-light-text-color;
+	}
+}
+
+.thingstodo_main_left_pic {
+	float: left;
+	margin-bottom: 2%;
+}
+.thingstodo_main_right_pic {
+	float: left;
+	margin-bottom: 2%;
+}
+
+/* rearranging the columns */
+[class*="col-"] {
+	position: relative;
+}
+.col-push-1 {
+	left: 25%;
+}
+.col-pull-3 {
+	left: -75%;
+	background-color: $weather-outside-wrapper-background-color;	
+}
+
+/* media queries */
+
+/* Desktop Screen Sizes */
+/* Pixel Range: >= 1000px; */
+@media only screen and (min-width: $min-desktop-width) {
+
+	// Using thingstodo_aside() mixin to set h3 and li parameters
+	@include thingstodo_aside($thingstodo-desktop-width-h3-font-size, $thingstodo-desktop-width-li-font-size, $thingstodo-desktop-width-li-line-height);
+}
+
+/* Tablet Screen Sizes */
+/* Pixel Range: >= 768px; */
+@media only screen and (min-width: $min-tablet-width) and (max-width: $min-desktop-width - 1) {
+
+	// Using thingstodo_aside() mixin to set h3 and li parameters
+	@include thingstodo_aside($thingstodo-tablet-width-h3-font-size, $thingstodo-tablet-width-li-font-size, $thingstodo-tablet-width-li-line-height);
+}
+
+/* Mobile Landscape Screen Sizes */
+/* pixel range: 480-767px */
+@media only screen and (min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width - 1)  {	
+
+	// Using thingstodo_aside() mixin to set h3 and li parameters
+	@include thingstodo_aside($thingstodo-phone-landscape-width-h3-font-size, $thingstodo-phone-landscape-width-li-font-size, $thingstodo-phone-landscape-width-li-line-height);
+}
+
+/* Mobile Portrait Screen Sizes */
+/* pixel range: <480px */	
+@media only screen and (max-width: $min-phone-landscape-width - 1)  {
+
+	// Using thingstodo_aside() mixin to set h3 and li parameters
+	@include thingstodo_aside($thingstodo-phone-portrait-width-h3-font-size, $thingstodo-phone-portrait-width-li-font-size, $thingstodo-phone-portrait-width-li-line-height);	
+
+	/* Keep the columns in the original order in the
+	   mobile portrait mode screen size */	
+  	.col-push-1,
+	.col-pull-3 {
+		left: 0;
+	}
+	.thingstodo_main_left_pic, .thingstodo_main_right_pic {
+		width: 100%;
+	}	 
+}
+
+
+/* Through some testing, noticed that the images looked stragnge at the boundary
+   conditions, added a few more media queries specifically for these images.
+   By doing this, able to keep the image as large as possible for a given screen
+   width. */
+
+@media only screen and (min-width: $min-desktop-width-breakpoint1) {
+	@include thingstodo-set-pic-props(".thingstodo_main_left_pic > img", $thingstodo-desktop-width-breakpoint1-main-left-pic-width, $thingstodo-desktop-width-breakpoint1-main-left-pic-max-width,
+							 $thingstodo-desktop-width-breakpoint1-main-left-pic-margin-left, $thingstodo-desktop-width-breakpoint1-main-left-pic-margin-right);
+
+	@include thingstodo-set-pic-props(".thingstodo_main_right_pic > img", $thingstodo-desktop-width-breakpoint1-main-right-pic-width, $thingstodo-desktop-width-breakpoint1-main-right-pic-max-width,
+							 			$thingstodo-desktop-width-breakpoint1-main-right-pic-margin-left, $thingstodo-desktop-width-breakpoint1-main-right-pic-margin-right);	
+}
+@media only screen and (min-width: $min-desktop-width) and (max-width: $min-desktop-width-breakpoint1 - 1) {
+	@include thingstodo-set-pic-props(".thingstodo_main_left_pic > img", $thingstodo-desktop-width-main-left-pic-width, $thingstodo-desktop-width-main-left-pic-max-width,
+							 			$thingstodo-desktop-width-main-left-pic-margin-left, $thingstodo-desktop-width-main-left-pic-margin-right);
+
+	@include thingstodo-set-pic-props(".thingstodo_main_right_pic > img", $thingstodo-desktop-width-main-right-pic-width, $thingstodo-desktop-width-main-right-pic-max-width,
+							 			$thingstodo-desktop-width-main-right-pic-margin-left, $thingstodo-desktop-width-main-right-pic-margin-right);	
+}
+@media only screen and (min-width: $min-tablet-width-breakpoint1) and (max-width: $min-desktop-width - 1) {
+	@include thingstodo-set-pic-props(".thingstodo_main_left_pic > img", $thingstodo-tablet-width-breakpoint1-main-left-pic-width, $thingstodo-tablet-width-breakpoint1-main-left-pic-max-width,
+							 			$thingstodo-tablet-width-breakpoint1-main-left-pic-margin-left, $thingstodo-tablet-width-breakpoint1-main-left-pic-margin-right);
+
+	@include thingstodo-set-pic-props(".thingstodo_main_right_pic > img", $thingstodo-tablet-width-breakpoint1-main-right-pic-width, $thingstodo-tablet-width-breakpoint1-main-right-pic-max-width,
+							 			$thingstodo-tablet-width-breakpoint1-main-right-pic-margin-left, $thingstodo-tablet-width-breakpoint1-main-right-pic-margin-right);
+}
+@media only screen and (min-width: $min-tablet-width) and (max-width: $min-tablet-width-breakpoint1 - 1) {
+	@include thingstodo-set-pic-props(".thingstodo_main_left_pic > img", $thingstodo-tablet-width-main-left-pic-width, $thingstodo-tablet-width-main-left-pic-max-width,
+							 			$thingstodo-tablet-width-main-left-pic-margin-left, $thingstodo-tablet-width-main-left-pic-margin-right);
+
+	@include thingstodo-set-pic-props(".thingstodo_main_right_pic > img", $thingstodo-tablet-width-main-right-pic-width, $thingstodo-tablet-width-main-right-pic-max-width,
+							 			$thingstodo-tablet-width-main-right-pic-margin-left, $thingstodo-tablet-width-main-right-pic-margin-right);	
+}
+@media only screen and (min-width: $min-phone-width-breakpoint1) and (max-width: $min-tablet-width - 1)  {	
+	@include thingstodo-set-pic-props(".thingstodo_main_left_pic > img", $thingstodo-phone-width-breakpoint1-main-left-pic-width, $thingstodo-phone-width-breakpoint1-main-left-pic-max-width,
+							 			$thingstodo-phone-width-breakpoint1-main-left-pic-margin-left, $thingstodo-phone-width-breakpoint1-main-left-pic-margin-right);
+
+	@include thingstodo-set-pic-props(".thingstodo_main_right_pic > img", $thingstodo-phone-width-breakpoint1-main-right-pic-width, $thingstodo-phone-width-breakpoint1-main-right-pic-max-width,
+							 			$thingstodo-phone-width-breakpoint1-main-right-pic-margin-left, $thingstodo-phone-width-breakpoint1-main-right-pic-margin-right);
+}
+@media only screen and (min-width: $min-phone-width-breakpoint2) and (max-width: $min-phone-width-breakpoint1 - 1)  {	
+	
+	@include thingstodo-set-pic-props(".thingstodo_main_left_pic > img", $thingstodo-phone-width-breakpoint2-main-left-pic-width, $thingstodo-phone-width-breakpoint2-main-left-pic-max-width,
+							 			$thingstodo-phone-width-breakpoint2-main-left-pic-margin-left, $thingstodo-phone-width-breakpoint2-main-left-pic-margin-right);
+	
+	@include thingstodo-set-pic-props(".thingstodo_main_right_pic > img", $thingstodo-phone-width-breakpoint2-main-right-pic-width, $thingstodo-phone-width-breakpoint2-main-right-pic-max-width,
+							 			$thingstodo-phone-width-breakpoint2-main-right-pic-margin-left, $thingstodo-phone-width-breakpoint2-main-right-pic-margin-right);	
+}
+@media only screen and (min-width: $min-phone-landscape-width) and (max-width: $min-phone-width-breakpoint2 - 1)  {	
+	@include thingstodo-set-pic-props(".thingstodo_main_left_pic > img", $thingstodo-phone-landscape-width-main-left-pic-width, $thingstodo-phone-landscape-width-main-left-pic-max-width,
+							 			$thingstodo-phone-landscape-width-main-left-pic-margin-left, $thingstodo-phone-landscape-width-main-left-pic-margin-right);
+
+	@include thingstodo-set-pic-props(".thingstodo_main_right_pic > img", $thingstodo-phone-landscape-width-main-right-pic-width, $thingstodo-phone-landscape-width-main-right-pic-max-width,
+							 			$thingstodo-phone-landscape-width-main-right-pic-margin-left, $thingstodo-phone-landscape-width-main-right-pic-margin-right);	
+}
