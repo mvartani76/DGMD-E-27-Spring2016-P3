@@ -129,7 +129,8 @@ form .form50, form .form50 {
 
 /* Desktop Screen Sizes */
 /* Pixel Range: >= $min-desktop-width; */
-@media only screen and (min-width: $min-desktop-width) {
+// Now using foundation breakpoint() mixin
+@media only screen and #{breakpoint(xlarge)} {
 	.contact_id h3, .login_id h3, .register_id h3 {
 		@include set-font-size-and-line-height(2.5em, 1.25em);
 	}
@@ -152,7 +153,8 @@ form .form50, form .form50 {
 
 /* Tablet Screen Sizes */
 /* Pixel Range: >= $min-tablet-width; */
-@media only screen and (min-width: $min-tablet-width) and (max-width: $min-desktop-width - 1) {
+// Now using foundation breakpoint() mixin
+@media only screen and #{breakpoint(large)} and #{breakpoint(xlarge down)} {
 	.contact_id h3, .login_id h3, .register_id h3 {
 		@include set-font-size-and-line-height(2.3em, 1.22em);
 	}
@@ -175,7 +177,8 @@ form .form50, form .form50 {
 
 /* Mobile Landscape Screen Sizes */
 /* pixel range: $min-phone-landscape-width-($min-tablet-width - 1) */
-@media only screen and (min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width - 1)  {
+// Now using foundation breakpoint() mixin
+@media only screen and #{breakpoint(medium)} and #{breakpoint(large down)}  {
 	.contact_id h3, .login_id h3, .register_id h3 {
 		@include set-font-size-and-line-height(2.2em, 1.15em);
 	}
@@ -198,7 +201,8 @@ form .form50, form .form50 {
 
 /* Mobile portrait Screen Sizes */
 /* pixel range: <=($min-phone-landscape-width - 1) */
-@media only screen and (max-width: $min-phone-landscape-width - 1)  {
+// Now using foundation breakpoint() mixin
+@media only screen and #{breakpoint(medium down)}  {
 	form .form50, form .form50 {
 		width: $form-phone-portrait-width-form50-width;
 	    display: inline;
