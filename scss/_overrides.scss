@@ -22,11 +22,8 @@
   color: $menu-toggle-hover-active-color;
 }
 
-/*----- Toggle Button -----*/
-.toggle-nav {
-  display: none;
-  background-color: #ED8F00;
-  width: 100%;
+.menu li.non-active a {
+  color: $menu-link-color;
 }
 
 /* media queries */

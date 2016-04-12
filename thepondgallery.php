@@ -34,13 +34,18 @@
 		<div class="row">
 			<!--<div class="menu large-12 columns">-->
 			<div class="top-bar" id="nav-menu">
-				<ul class="menu expanded">
+				<ul class="menu dropdown expanded" data-dropdown-menu>
 					<li><a href="./index.php">Home</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="./thingstodo.php">Things to Do</a></li>
 					<li class="active"><a href="./photogallery.php">Photo Gallery</a></li>
-					<li><a href="./login.php">Login</a></li>
-					<li><a href="./register.php">Register</a></li>
+					<!-- Login/Register is a dropdown menu and contains submenus for Login and Register -->
+					<li class=".is-dropdown-submenu-parent"><a href="#">Login/Register</a>
+					    <ul class="menu">
+      						<li><a href="./login.php">Login</a></li>
+      						<li><a href="./register.php">Register</a></li>
+    					</ul>
+    				</li>
 					<li><a href="./contact.php">Contact Us</a></li>
 				</ul>
 			</div>
