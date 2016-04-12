@@ -57,7 +57,7 @@
 
 // This mixin sets the font-size and padding properties
 // For the ul and a tags within the menu class
-@mixin set-menu-ul-a-props($font-size, $padding){
+@mixin set-menu-a-props($font-size, $padding){
 	.menu ul a {
 		font-size: $font-size;
 		padding: $padding;

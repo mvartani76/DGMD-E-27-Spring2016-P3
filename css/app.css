@@ -5960,25 +5960,6 @@ footer {
   display: table;
   clear: both; }
 
-[class*='col-'] {
-  float: left;
-  min-height: 1px; }
-
-.col-1 {
-  width: 25%; }
-
-.col-2 {
-  width: 50%; }
-
-.col-3 {
-  width: 75%; }
-
-.col-4 {
-  width: 100%; }
-
-.col-1-2-4 {
-  width: 25%; }
-
 /* media queries */
 /* Desktop Screen Sizes */
 /* Pixel Range: >= $min-desktop-width */
@@ -6079,9 +6060,6 @@ footer {
     background: url(../images/sog-entrance-800.jpg) no-repeat;
     width: 800px;
     height: 300px; }
-  .menu ul a {
-    font-size: 0.75em;
-    padding: 0.5em; }
   main h2 {
     font-size: 1.75em;
     line-height: 1.15em;
@@ -6110,8 +6088,6 @@ footer {
   .pondgallery {
     width: 85%;
     margin: 0 auto; }
-  .col-1-2-4 {
-    width: 50%; }
   .col-1-2-4 h3 {
     font-size: 1.25em;
     margin: 0 auto;
@@ -6135,56 +6111,6 @@ footer {
   header h1 a {
     color: #FFF;
     text-decoration: none; }
-  /* Nesting the menu class */
-  .menu {
-    position: relative;
-    display: block; }
-  .menu ul.active-toggle {
-    display: none;
-    background-color: #ED8F00; }
-  .menu ul {
-    width: 100%;
-    position: absolute;
-    top: 120%;
-    margin-left: 0px;
-    padding-left: 1%;
-    background: #ED8F00; }
-  .menu ul:after {
-    width: 0px;
-    height: 0px;
-    position: absolute;
-    top: 0%;
-    left: 5%;
-    content: '';
-    -ms-transform: translate(0%, -100%);
-    -webkit-transform: translate(0%, -100%);
-    transform: translate(0%, -100%); }
-  .menu li {
-    padding-left: 2%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    float: left;
-    display: block; }
-  .menu a {
-    display: block; }
-  ul > li {
-    float: none;
-    width: 100%; }
-  .toggle-nav {
-    padding: 1em;
-    float: left;
-    display: block;
-    background-color: #ED8F00;
-    color: #FFF;
-    font-size: 20px;
-    transition-property: color;
-    transition-duration: 0.15s;
-    transition-timing-function: linear;
-    text-decoration: none;
-    font-weight: bold; }
-  .toggle-nav:hover, .toggle-nav.active {
-    text-decoration: none;
-    color: #a16100; }
   main h2 {
     font-size: 1.5em;
     line-height: 1.2em;
@@ -6464,21 +6390,21 @@ form .form50, form .form50 {
 /* Desktop Screen Sizes */
 /* Pixel Range: >= $min-desktop-width; */
 @media only screen and (min-width: 65.625em) {
-  .menu a {
+  .menu ul a {
     font-size: 1.25em;
     padding: 1%; } }
 
 /* Tablet Screen Sizes */
 /* Pixel Range: >= $min-tablet-width; */
 @media only screen and (min-width: 48em) and (max-width: 74.9375em) {
-  .menu a {
+  .menu ul a {
     font-size: 1em;
     padding: 0.8em; } }
 
 /* Mobile Landscape Screen Sizes */
 /* pixel range: $min-phone-landscape-width-($min-tablet-width - 1) */
 @media only screen and (min-width: 30em) and (max-width: 50.25em) {
-  .menu a {
+  .menu ul a {
     font-size: 0.75em;
     padding: 0.5em; } }
 
