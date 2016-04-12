@@ -26,7 +26,7 @@
 			<noscript><img src="img/sog-entrance-800.jpg.jpg"></noscript>
 		</div>
 		
-		<div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="medium">
+		<div class="title-bar" data-sticky data-options="marginTop:0;" data-responsive-toggle="nav-menu" data-hide-for="medium">
 			<button class="menu-icon" type="button" data-toggle></button>
 			<div class="title-bar-title">Menu</div>
 		</div>
@@ -51,22 +51,22 @@
 			<p>We would love for you to share your Shores of Glenwood photo memories with us. Please contact us and we will upload your photos to this site.</p> 
 		</div>
 		<div class="row" data-equalizer>
-			<div class="large-3 medium-6 columns" data-equalizer-watch>
+			<div class="col-1-2-4 large-3 medium-6 columns" data-equalizer-watch>
 				<h3>The Nature Preserve</h3>
 			    <a href="#"><img src="img/sog-preserve-entrance-250.jpg" alt="Our Nature Preserve"></a>
 			    <p>We are so lucky to have a state nature preserve with a forest, lake and a river with lots of natural wildlife.</p>
 			</div>
-			<div class="large-3 medium-6 columns" data-equalizer-watch>
+			<div class="col-1-2-4 large-3 medium-6 columns" data-equalizer-watch>
 				<h3>The Front Pond</h3>
-			    <a href="#"><img src="img/sog-pond-winter-350.jpg" alt="The Front Pond"></a>
+			    <a href="./thepondgallery.php"><img src="img/sog-pond-winter-350.jpg" alt="The Front Pond"></a>
 			    <p>The pond near our subdivision entrance way is both beautiful as well as a source for winter enjoyment.</p>
 			</div>
-			<div class="large-3 medium-6 columns" data-equalizer-watch>
+			<div class="col-1-2-4 large-3 medium-6 columns" data-equalizer-watch>
 				<h3>Night Time</h3>
 			    <a href="#"><img src="img/sog-entrance-night-250.jpg" alt="Night Time"></a>
 			    <p>The beauty of our neighborhood at night during the holidays...</p>
 			</div>
-			<div class="large-3 medium-6 columns" data-equalizer-watch>
+			<div class="col-1-2-4 large-3 medium-6 columns" data-equalizer-watch>
 				<h3>Our Houses</h3>
 			    <a href="#"><img src="img/sog-houses-300.jpg" alt="Our Houses"></a>
 			    <p>We have many beautiful houses in our neighborhood. Please see pictures of the houses that our residents have shared.</p>
