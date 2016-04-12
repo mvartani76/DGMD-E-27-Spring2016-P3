@@ -49,49 +49,51 @@
 			<h2>The Shores of Glenwood Entry Pond during the Winter</h2>
 			<p>The pond near the entrance of our subdivision is a sanctuary for much wildlife during the summer but during the winter months, not much wildlife to be found... </p>
 		</div>
-
-		<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
-			<ul class="orbit-container">
-				<button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
-				<button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
-				<li class="is-active orbit-slide">
-					<img class="orbit-image" src="img/pondgallery/pond1.jpg" alt="The Pond">
-					<figcaption class="orbit-caption">The pond is just on the other side of the street...</figcaption>
-				</li>
-				<li class="orbit-slide">
-					<img class="orbit-image" src="img/pondgallery/pond2.jpg" alt="The Pond">
-					<figcaption class="orbit-caption">A closer look at the well...</figcaption>
-				</li>
-				<li class="orbit-slide">
-					<img class="orbit-image" src="img/pondgallery/pond3.jpg" alt="The Pond">
-					<figcaption class="orbit-caption">A view of the pond with the well from the street...</figcaption>
-				</li>
-				<li class="orbit-slide">
-					<img class="orbit-image" src="img/pondgallery/pond4.jpg" alt="The Pond">
-					<figcaption class="orbit-caption">Many kids use the pond to ice skate on in the winter...</figcaption>
-				</li>
-				<li class="orbit-slide">
-					<img class="orbit-image" src="img/pondgallery/pond5.jpg" alt="The Pond">
-					<figcaption class="orbit-caption">The well is non-functional...</figcaption>
-				</li>
-				<li class="orbit-slide">
-					<img class="orbit-image" src="img/pondgallery/pond6.jpg" alt="The Pond">
-					<figcaption class="orbit-caption">Another view of the pond...</figcaption>
-				</li>
-				<li class="orbit-slide">
-					<img class="orbit-image" src="img/pondgallery/pond7.jpg" alt="The Pond">
-					<figcaption class="orbit-caption">And here is the pond again...</figcaption>
-				</li>																				
-			</ul>
-			<nav class="orbit-bullets">
-				<button class="is-active" data-slide="0"><span class="show-for-sr">The pond is just on the other side of the street...</span><span class="show-for-sr">Current Slide</span></button>
-				<button data-slide="1"><span class="show-for-sr">A view of the pond with the well from the street...</span></button>
-				<button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
-				<button data-slide="3"><span class="show-for-sr">Many kids use the pond to ice skate on in the winter...</span></button>
-				<button data-slide="4"><span class="show-for-sr">The well is non-functional...</span></button>
-				<button data-slide="5"><span class="show-for-sr">Another view of the pond...</span></button>
-				<button data-slide="6"><span class="show-for-sr">And here is the pond again...</span></button>
-			</nav>
+		<div class="row">
+		<!-- Using Foundation Orbit javascript widget to create an image carousel for the pond pictures -->
+			<div class="orbit pondgallery" role="region" aria-label="Favorite Space Pictures" data-orbit>
+				<ul class="orbit-container">
+					<button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+					<button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+					<li class="is-active orbit-slide">
+						<img class="orbit-image" src="img/pondgallery/pond1.jpg" alt="The Pond">
+						<figcaption class="orbit-caption">The pond is just on the other side of the street...</figcaption>
+					</li>
+					<li class="orbit-slide">
+						<img class="orbit-image" src="img/pondgallery/pond2.jpg" alt="The Pond">
+						<figcaption class="orbit-caption">A closer look at the well...</figcaption>
+					</li>
+					<li class="orbit-slide">
+						<img class="orbit-image" src="img/pondgallery/pond3.jpg" alt="The Pond">
+						<figcaption class="orbit-caption">A view of the pond with the well from the street...</figcaption>
+					</li>
+					<li class="orbit-slide">
+						<img class="orbit-image" src="img/pondgallery/pond4.jpg" alt="The Pond">
+						<figcaption class="orbit-caption">Many kids use the pond to ice skate on in the winter...</figcaption>
+					</li>
+					<li class="orbit-slide">
+						<img class="orbit-image" src="img/pondgallery/pond5.jpg" alt="The Pond">
+						<figcaption class="orbit-caption">The well is non-functional...</figcaption>
+					</li>
+					<li class="orbit-slide">
+						<img class="orbit-image" src="img/pondgallery/pond6.jpg" alt="The Pond">
+						<figcaption class="orbit-caption">Another view of the pond...</figcaption>
+					</li>
+					<li class="orbit-slide">
+						<img class="orbit-image" src="img/pondgallery/pond7.jpg" alt="The Pond">
+						<figcaption class="orbit-caption">And here is the pond again...</figcaption>
+					</li>																				
+				</ul>
+				<nav class="orbit-bullets">
+					<button class="is-active" data-slide="0"><span class="show-for-sr">The pond is just on the other side of the street...</span><span class="show-for-sr">Current Slide</span></button>
+					<button data-slide="1"><span class="show-for-sr">A view of the pond with the well from the street...</span></button>
+					<button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+					<button data-slide="3"><span class="show-for-sr">Many kids use the pond to ice skate on in the winter...</span></button>
+					<button data-slide="4"><span class="show-for-sr">The well is non-functional...</span></button>
+					<button data-slide="5"><span class="show-for-sr">Another view of the pond...</span></button>
+					<button data-slide="6"><span class="show-for-sr">And here is the pond again...</span></button>
+				</nav>
+			</div>
 		</div>
 	</div>
 	<div class="row">
