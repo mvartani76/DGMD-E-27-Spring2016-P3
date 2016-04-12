@@ -3317,8 +3317,8 @@ select {
     left: 0;
     box-shadow: 0 7px 0 #fefefe, 0 14px 0 #fefefe; }
   .menu-icon:hover::after {
-    background: #cacaca;
-    box-shadow: 0 7px 0 #cacaca, 0 14px 0 #cacaca; }
+    background: #a16100;
+    box-shadow: 0 7px 0 #a16100, 0 14px 0 #a16100; }
 
 .menu-icon.dark {
   position: relative;
@@ -4771,7 +4771,7 @@ table.hover tr:nth-of-type(even):hover {
     box-shadow: 0 0 6px 1px rgba(33, 153, 232, 0.5); }
 
 .title-bar {
-  background: #0a0a0a;
+  background: #ED8F00;
   color: #fefefe;
   padding: 0.5rem; }
   .title-bar::before, .title-bar::after {
