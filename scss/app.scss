@@ -51,3 +51,5 @@
 
 @import 'styles';
 @import 'formstyle';
+// Include partial for overriding foundation settings
+@import 'overrides';

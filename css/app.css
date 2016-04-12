@@ -5884,33 +5884,6 @@ header {
   font-family: 'Lato', sans-serif;
   color: #FFF; }
 
-.menu {
-  background-color: #ED8F00; }
-
-.menu ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  overflow: auto; }
-
-.menu ul li {
-  font-family: 'Lato', sans-serif; }
-
-.menu ul a {
-  color: #FFF;
-  text-decoration: none;
-  font-weight: bold;
-  float: left; }
-
-.menu ul a:hover, .menu ul li.active a {
-  color: #a16100; }
-
-/*----- Toggle Button -----*/
-.toggle-nav {
-  display: none;
-  background-color: #ED8F00;
-  width: 100%; }
-
 main {
   overflow: auto;
   background-color: #EFECCA; }
@@ -6015,9 +5988,6 @@ footer {
     background: url(../images/sog-entrance-1200.jpg) no-repeat;
     width: 1200px;
     height: 300px; }
-  .menu ul a {
-    font-size: 1.25em;
-    padding: 1%; }
   main h2 {
     font-size: 2.5em;
     line-height: 1.25em;
@@ -6064,9 +6034,6 @@ footer {
     background: url(../images/sog-entrance-1000.jpg) no-repeat;
     width: 1000px;
     height: 300px; }
-  .menu ul a {
-    font-size: 1em;
-    padding: 0.8em; }
   main h2 {
     font-size: 2.25em;
     line-height: 1.2em;
@@ -6465,3 +6432,105 @@ form .form50, form .form50 {
     padding: 10px; }
   .contact_id button[type="submit"], .login_id button[type="submit"], .register_id button[type="submit"] {
     font-size: 1.3em; } }
+
+.menu {
+  background-color: #ED8F00; }
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: auto; }
+
+.menu li {
+  font-family: 'Lato', sans-serif; }
+
+.menu a {
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  float: left; }
+
+.menu a:hover, .menu li.active a {
+  color: #a16100; }
+
+/*----- Toggle Button -----*/
+.toggle-nav {
+  display: none;
+  background-color: #ED8F00;
+  width: 100%; }
+
+/* media queries */
+/* Desktop Screen Sizes */
+/* Pixel Range: >= $min-desktop-width; */
+@media only screen and (min-width: 65.625em) {
+  .menu a {
+    font-size: 1.25em;
+    padding: 1%; } }
+
+/* Tablet Screen Sizes */
+/* Pixel Range: >= $min-tablet-width; */
+@media only screen and (min-width: 48em) and (max-width: 74.9375em) {
+  .menu a {
+    font-size: 1em;
+    padding: 0.8em; } }
+
+/* Mobile Landscape Screen Sizes */
+/* pixel range: $min-phone-landscape-width-($min-tablet-width - 1) */
+@media only screen and (min-width: 30em) and (max-width: 50.25em) {
+  .menu a {
+    font-size: 0.75em;
+    padding: 0.5em; } }
+
+/* Mobile portrait Screen Sizes */
+/* pixel range: <=($min-phone-landscape-width - 1) */
+@media only screen and (max-width: 31.9375em) {
+  .menu {
+    position: relative;
+    display: block; }
+  .menu ul.active-toggle {
+    display: none;
+    background-color: #ED8F00; }
+  .menu {
+    width: 100%;
+    position: absolute;
+    top: 120%;
+    margin-left: 0px;
+    padding-left: 1%;
+    background: #ED8F00; }
+  .menu:after {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: 0%;
+    left: 5%;
+    content: '';
+    -ms-transform: translate(0%, -100%);
+    -webkit-transform: translate(0%, -100%);
+    transform: translate(0%, -100%); }
+  .menu li {
+    padding-left: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    float: left;
+    display: block; }
+  .menu a {
+    display: block; }
+  ul > li {
+    float: none;
+    width: 100%; }
+  .toggle-nav {
+    padding: 1em;
+    float: left;
+    display: block;
+    background-color: #ED8F00;
+    color: #FFF;
+    font-size: 20px;
+    transition-property: color;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    text-decoration: none;
+    font-weight: bold; }
+  .toggle-nav:hover, .toggle-nav.active {
+    text-decoration: none;
+    color: #a16100; } }

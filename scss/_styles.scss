@@ -41,35 +41,6 @@ header {
   color: #FFF;
 }
 
-.menu {
-  background-color: #ED8F00;
-}
-.menu ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  overflow: auto;
-}
-.menu ul li {
-  font-family: 'Lato', sans-serif;
-}
-.menu ul a {
-  color: #FFF;
-  text-decoration: none;
-  font-weight: bold;
-  float: left;
-}
-.menu ul a:hover, .menu ul li.active a {
-  color: #a16100;
-}
-
-/*----- Toggle Button -----*/
-.toggle-nav {
-  display: none;
-  background-color: #ED8F00;
-  width: 100%;
-}
-
 main {
   overflow: auto;
   background-color: #EFECCA;
@@ -189,11 +160,6 @@ footer {
     height: 300px;
   }
 
-  .menu ul a {
-    font-size: 1.25em;
-    padding: 1%;
-  }
-
   main h2 {
     font-size: 2.5em;
     line-height: 1.25em;
@@ -252,11 +218,6 @@ footer {
     background: url(../images/sog-entrance-1000.jpg) no-repeat;
     width: 1000px;
     height: 300px;
-  }
-
-  .menu ul a {
-    font-size: 1em;
-    padding: 0.8em;
   }
 
   main h2 {
