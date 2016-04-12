@@ -35,30 +35,24 @@
 /* Pixel Range: >= $min-desktop-width; */
 // Now using foundation breakpoint() mixin
 @media only screen and #{breakpoint(xlarge)} {
-	.menu a {
-		font-size: 1.25em;
-		padding: 1%;
-	}
+	// Use set-menu-a-props() mixin to set the font-size and padding properties
+	@include set-menu-a-props($menu-desktop-width-a-font-size, $menu-desktop-width-a-padding);	
 }
 
 /* Tablet Screen Sizes */
 /* Pixel Range: >= $min-tablet-width; */
 // Now using foundation breakpoint() mixin
 @media only screen and #{breakpoint(large)} and #{breakpoint(xlarge down)} {
-	.menu a {
-		font-size: 1em;
-		padding: 0.8em;
-	}
+	// Use set-menu-a-props() mixin to set the font-size and padding properties
+	@include set-menu-a-props($menu-tablet-width-a-font-size, $menu-tablet-width-a-padding);
 }
 
 /* Mobile Landscape Screen Sizes */
 /* pixel range: $min-phone-landscape-width-($min-tablet-width - 1) */
 // Now using foundation breakpoint() mixin
 @media only screen and #{breakpoint(medium)} and #{breakpoint(large down)}  {
-	.menu a {
-		font-size: 0.75em;
-		padding: 0.5em;
-	}
+	// Use set-menu-a-props() mixin to set the font-size and padding properties
+	@include set-menu-a-props($menu-phone-landscape-width-a-font-size, $menu-phone-landscape-width-a-padding);
 }
 
 /* Mobile portrait Screen Sizes */
