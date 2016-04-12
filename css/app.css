@@ -4240,12 +4240,12 @@ body {
     width: 1.2rem;
     height: 1.2rem;
     margin: 0.1rem;
-    background-color: #cacaca;
+    background-color: #ED8F00;
     border-radius: 50%; }
     .orbit-bullets button:hover {
-      background-color: #8a8a8a; }
+      background-color: #a16100; }
     .orbit-bullets button.is-active {
-      background-color: #8a8a8a; }
+      background-color: #a16100; }
 
 .pagination {
   margin-left: 0;
