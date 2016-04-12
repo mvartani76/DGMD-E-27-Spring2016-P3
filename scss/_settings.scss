@@ -83,13 +83,13 @@ $print-transparent-backgrounds: true;
 
 $breakpoints: (
   small: 0,
-  medium: 480px,
-  medium_bk2: 512px,
-  medium_bk1: 590px,  
-  large: 768px,
-  large_bk1: 805px,  
-  xlarge: 1050px,
-  xlarge_bk1: 1200px,
+  medium: $min-phone-landscape-width,
+  medium_bk2: $min-phone-width-breakpoint2,
+  medium_bk1: $min-phone-width-breakpoint1,  
+  large: $min-tablet-width,
+  large_bk1: $min-tablet-width-breakpoint1,  
+  xlarge: $min-desktop-width,
+  xlarge_bk1: $min-desktop-width-breakpoint1,
   xxlarge: 1440px,
 );
 $breakpoint-classes: (small medium medium_bk1 medium_bk2 large large_bk1 xlarge xlarge_bk1);
