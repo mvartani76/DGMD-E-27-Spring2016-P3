@@ -28,7 +28,7 @@ The code consists of the following files:
 
 ## Generated CSS Files:
 As everything is incorporated as partials, there is only one generated css file with regards to the work that I am doing.
-**app.css** - Thi stylesheet contains all the styles from the foundation files as well as my own specific stylings.<br>
+**app.css** - This stylesheet contains all the styles from the foundation files as well as my own specific stylings.<br>
 
 ##JS Source Files (not including associated js needed for foundation):
 **openWeather.js** - jQuery code snippet from Michael Lynch (http://michaelynch.com) distributed under MIT license to access the OpenWeather API.<br>
