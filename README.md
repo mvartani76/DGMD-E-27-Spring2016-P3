@@ -21,14 +21,14 @@ The code consists of the following files:
 **app.scss** - This is the default foundation sass file that links in all the other partial sass files..<br>
 
 ##SASS Partial Files:
-**_formstyle.scss** - Stylings for the various forms in the site.
-**_form_variables.scss** - Sass variables used in formstyle partial.
-**_form_extends.scss** - Extends used in the formstyle partial.
-**_form_mixins.scss** - Mixins used in the formstyle partial.
+**_formstyle.scss** - Stylings for the various forms in the site.<br>
+**_form_variables.scss** - Sass variables used in formstyle partial.<br>
+**_form_extends.scss** - Extends used in the formstyle partial.<br>
+**_form_mixins.scss** - Mixins used in the formstyle partial.<br>
 
 ## Generated CSS Files:
-These files are generated from the SASS source files above.<br><br>
-**app.css** - The stylesheet that normalizes everything between browsers.<br>
+As everything is incorporated as partials, there is only one generated css file with regards to the work that I am doing.
+**app.css** - Thi stylesheet contains all the styles from the foundation files as well as my own specific stylings.<br>
 
 ##JS Source Files (not including associated js needed for foundation):
 **openWeather.js** - jQuery code snippet from Michael Lynch (http://michaelynch.com) distributed under MIT license to access the OpenWeather API.<br>
