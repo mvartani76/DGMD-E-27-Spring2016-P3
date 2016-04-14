@@ -172,7 +172,7 @@
 				http://openweathermap.org/
 
 				Unfortunately, my city does not show up on the database so it chose the closest city to it... -->
-				<div class="weather-wrapper hide">
+				<div class="weather-wrapper">
 					<img src="#" class="weather-icon" alt="Weather Icon" />
 			
 					<p><strong>Place</strong><br>
