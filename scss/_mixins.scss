@@ -79,8 +79,10 @@
 		}
 
 		img:hover {
-			// Compass mixin that scales the images in the photogallery when hovering over the image
-			@include scale($img-scale-x,$image-scale-y);
+			-moz-transform: scale($img-scale-x, $image-scale-y);
+			-ms-transform: scale($img-scale-x, $image-scale-y);
+			-webkit-transform: scale($img-scale-x, $image-scale-y);
+			transform: scale($img-scale-x, $image-scale-y);
 		}
 	}
 }

@@ -5887,25 +5887,21 @@ header {
 main {
   overflow: auto;
   background-color: #EFECCA; }
-
-main h2 {
-  padding-top: 0em;
-  background-color: #EFECCA;
-  color: #61381D;
-  text-align: center;
-  font-family: 'Francois One', sans-serif; }
-
-main h3, main h4 {
-  background-color: #EFECCA;
-  font-family: 'Francois One', sans-serif; }
-
-main p {
-  font-family: 'Lato', sans-serif;
-  background-color: #EFECCA;
-  color: #BB6F39; }
-
-main img {
-  float: left; }
+  main h2 {
+    padding-top: 0em;
+    background-color: #EFECCA;
+    color: #61381D;
+    text-align: center;
+    font-family: 'Francois One', sans-serif; }
+  main h3, main h4 {
+    background-color: #EFECCA;
+    font-family: 'Francois One', sans-serif; }
+  main p {
+    font-family: 'Lato', sans-serif;
+    background-color: #EFECCA;
+    color: #BB6F39; }
+  main img {
+    float: left; }
 
 div.photogallery h2 {
   padding-top: 0em;
@@ -5964,11 +5960,6 @@ footer {
 /* Desktop Screen Sizes */
 /* Pixel Range: >= $min-desktop-width */
 @media only screen and (min-width: 65.625em) {
-  /* Use the 1200px width background image in the header*/
-  header {
-    background: url(../images/sog-entrance-1200.jpg) no-repeat;
-    width: 1200px;
-    height: 300px; }
   main h2 {
     font-size: 2.5em;
     line-height: 1.25em;
@@ -5995,9 +5986,6 @@ footer {
     line-height: 1.1em;
     margin-left: 0.25em;
     margin-right: 0.25em; }
-  .pondgallery {
-    width: 50%;
-    margin: 0 auto; }
   .col-1-2-4 h3 {
     font-size: 1.25em;
     margin: 0 auto;
@@ -6005,16 +5993,14 @@ footer {
   .col-1-2-4 img:hover {
     -ms-transform: scale(1.02, 1.02);
     -webkit-transform: scale(1.02, 1.02);
-    transform: scale(1.02, 1.02); } }
+    transform: scale(1.02, 1.02); }
+  .pondgallery {
+    width: 50%;
+    margin: 0 auto; } }
 
 /* Tablet Screen Sizes */
 /* pixel range: $min-tablet-width - ($min-desktop-width - 1) */
 @media only screen and (min-width: 48em) and (max-width: 74.9375em) {
-  /* Use the 1000px width background image in the header*/
-  header {
-    background: url(../images/sog-entrance-1000.jpg) no-repeat;
-    width: 1000px;
-    height: 300px; }
   main h2 {
     font-size: 2.25em;
     line-height: 1.2em;
@@ -6040,9 +6026,6 @@ footer {
     line-height: 1.15em;
     margin-left: 0.2em;
     margin-right: 0.2em; }
-  .pondgallery {
-    width: 65%;
-    margin: 0 auto; }
   .col-1-2-4 h3 {
     font-size: 1.1em;
     margin: 0 auto;
@@ -6050,16 +6033,14 @@ footer {
   .col-1-2-4 img:hover {
     -ms-transform: scale(1.05, 1.05);
     -webkit-transform: scale(1.05, 1.05);
-    transform: scale(1.05, 1.05); } }
+    transform: scale(1.05, 1.05); }
+  .pondgallery {
+    width: 65%;
+    margin: 0 auto; } }
 
 /* Mobile Landscape Screen Sizes */
 /* pixel range: $min-phone-landscape-width - ($min-tablet-width - 1) */
 @media only screen and (min-width: 30em) and (max-width: 50.25em) {
-  /* Use the 800px width background image in the header*/
-  header {
-    background: url(../images/sog-entrance-800.jpg) no-repeat;
-    width: 800px;
-    height: 300px; }
   main h2 {
     font-size: 1.75em;
     line-height: 1.15em;
@@ -6085,9 +6066,6 @@ footer {
     line-height: 1.1em;
     margin-left: 0.15em;
     margin-right: 0.15em; }
-  .pondgallery {
-    width: 85%;
-    margin: 0 auto; }
   .col-1-2-4 h3 {
     font-size: 1.25em;
     margin: 0 auto;
@@ -6095,16 +6073,14 @@ footer {
   .col-1-2-4 img:hover {
     -ms-transform: scale(1.02, 1.05);
     -webkit-transform: scale(1.02, 1.05);
-    transform: scale(1.02, 1.05); } }
+    transform: scale(1.02, 1.05); }
+  .pondgallery {
+    width: 85%;
+    margin: 0 auto; } }
 
 /* Mobile portrait Screen Sizes */
 /* pixel range: <= ($min-phone-landscape-width - 1) */
 @media only screen and (max-width: 31.9375em) {
-  /* Use the 500px width background image in the header*/
-  header {
-    background: url(../images/sog-entrance-500.jpg) no-repeat;
-    width: 500px;
-    height: 255px; }
   header h1 {
     padding: 0.5em;
     margin: 0; }
@@ -6136,9 +6112,6 @@ footer {
     font-size: 1em;
     line-height: 1.15em;
     text-align: center; }
-  .pondgallery {
-    width: 95%;
-    margin: 0 auto; }
   .first_main_pic, .second_main_pic {
     float: none; }
   .col-1-2-4 h3 {
@@ -6148,10 +6121,9 @@ footer {
   .col-1-2-4 p {
     margin-left: 2%;
     margin-right: 2%; }
-  [class*='col-'] {
-    width: 100%;
-    float: none;
-    margin-left: 0; } }
+  .pondgallery {
+    width: 95%;
+    margin: 0 auto; } }
 
 /* This is the stylesheet for the three form pages that are in this
    this website, namely login.php, register.php, and contact.php. */

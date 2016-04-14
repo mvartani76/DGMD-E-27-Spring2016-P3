@@ -1,3 +1,7 @@
+@import "variables";
+@import "helper_functions";
+@import "mixins";
+
 /* Border box declaration */
 html {
   box-sizing: border-box;
@@ -11,111 +15,121 @@ html {
 }
 
 body {
-  font-size: 100%;
-  font-family: 'Lato', sans-serif;
-  background-color: #70482D;
+	font-size: $body-font-size;
+	font-family: 'Lato', sans-serif;
+	background-color: $body-background-color;
 }
 
 body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
-  font-size-adjust: 0.5;
+  font-size-adjust: $primary-font-size-adjust;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Francois One', sans-serif;
+	font-family: 'Francois One', sans-serif;
 }
 
 a {
-  color: #2772B0;
+	color: $primary-link-color;
 }
 
 .wrapper {
-  width: 97%;
-  max-width: 1200px;
-  margin: 0 auto;
-  float: none;
-  background-color: #EFECCA;
+	width: $wrapper-width;
+	max-width: $wrapper-max-width;
+	margin: 0 auto;
+	float: none;
+	background-color: $primary-background-color;	
 }
 
 header {
-  font-family: 'Lato', sans-serif;
-  color: #FFF;
+		font-family: 'Lato', sans-serif; 
+		color: $primary-header-text-color;
 }
 
+// Nesting the main tag
+// Moved the main img from below up into this nested section
 main {
-  overflow: auto;
-  background-color: #EFECCA;
-}
-main h2 {
-  padding-top: 0em;
-  background-color: #EFECCA;
-  color: #61381D;
-  text-align: center;
-  font-family: 'Francois One', sans-serif;
-}
-main h3, main h4 {
-  background-color: #EFECCA;
-  font-family: 'Francois One', sans-serif;
-}
-main p {
-  font-family: 'Lato', sans-serif;
-  background-color: #EFECCA;
-  color: #BB6F39;
-}
-main img {
-  float: left;
+	overflow: auto;
+	background-color: $primary-background-color;
+
+	h2 {
+		padding-top: 0em;
+		background-color: $primary-background-color;
+		color: $primary-heading-text-color;
+		text-align: center;
+		font-family: 'Francois One', sans-serif;
+	}
+	h3, h4 {
+		background-color: $primary-background-color;
+		font-family: 'Francois One', sans-serif;
+	}
+
+	p {
+		font-family: 'Lato', sans-serif;
+		background-color: $primary-background-color;
+		color: $primary-light-text-color;
+	}
+
+	img {
+		float: left;
+	}
 }
 
-div.photogallery h2 {
-  padding-top: 0em;
-  background-color: #EFECCA;
-  color: #61381D;
-  text-align: center;
-  font-family: 'Francois One', sans-serif;
-}
-div.photogallery p {
-  font-family: 'Lato', sans-serif;
-  background-color: #EFECCA;
-  color: #BB6F39;
-  padding-left: 1%;
-  padding-right: 1%;
+// Nested the div.photography class
+// Needed to separate this from the main nesting
+div.photogallery {
+	h2 {
+		padding-top: 0em;
+		background-color: $primary-background-color;
+		color: $primary-heading-text-color;
+		text-align: center;
+		font-family: 'Francois One', sans-serif;
+	}
+
+	p {
+		font-family: 'Lato', sans-serif;
+		background-color: $primary-background-color;
+		color: $primary-light-text-color;
+		padding: {
+			left: $photo-photogallery-p-padding-left;
+			right: $photo-photogallery-p-padding-right;
+		}
+	}
 }
 
 .second_main_pic {
-  float: right;
+	float: right;
 }
 
-div.col-1-2-4 img {
-  max-width: 350px;
-  width: 95%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-div.col-1-2-4 p {
-  width: 95%;
-  padding-left: 5%;
-  padding-right: 2%;
-  font-family: 'Lato', sans-serif;
-  color: #BB6F39;
+div.col-1-2-4 {
+	img {
+		max-width: 350px;
+		width: 95%;
+		display: block;
+	    // Nest the margin property
+	    margin: {
+	    	left: auto;
+	    	right: auto;
+	    }
+	}
+
+	p {
+		width: 95%;
+		// Nest the padding property
+		padding: {
+			left: 5%;
+			right: 2%;
+		}
+		font-family: 'Lato', sans-serif;
+		color: $primary-light-text-color;
+	}
 }
 
 .col-1-2-4 h3 {
-  color: #61381D;
+	color: $primary-heading-text-color;
 }
 
-footer {
-  clear: both;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  padding-left: 0;
-  padding-right: 0;
-  margin-top: 0.75em;
-  margin-bottom: 0.75em;
-  margin-left: 0;
-  margin-right: 0;
-  color: #999;
-  text-align: center;
-}
+@include set-footer($footer-padding-top, $footer-padding-bottom, $footer-padding-left, $footer-padding-right,
+					$footer-margin-top, $footer-margin-bottom, $footer-margin-left, $footer-margin-right);
 
 /* grid system */
 .row::after {
@@ -129,256 +143,209 @@ footer {
 /* Pixel Range: >= $min-desktop-width */
 // Now using foundation breakpoint() mixin
 @media only screen and #{breakpoint(xlarge)}  {
-  /* Use the 1200px width background image in the header*/
-  header {
-    background: url(../images/sog-entrance-1200.jpg) no-repeat;
-    width: 1200px;
-    height: 300px;
-  }
 
-  main h2 {
-    font-size: 2.5em;
-    line-height: 1.25em;
-    padding-left: 0.25em;
-    padding-right: 0.25em;
-  }
-  main p {
-    font-size: 1.5em;
-    line-height: 1.1em;
-    margin-left: 0.25em;
-    margin-right: 0.25em;
-  }
-  main img {
-    padding-top: 0%;
-    padding-left: 1%;
-    padding-bottom: 1%;
-    margin-right: 1.4em;
-    float: left;
-  }
+	// Nesting the main tag
+	main {
+	
+		@include set-selector-props(h2, $main-base-h2-font-size, $main-desktop-width-h2-font-size-scale-factor,
+										$main-base-h2-line-height, $main-desktop-width-h2-line-height-scale-factor,
+										$main-base-h2-padding, $main-desktop-width-h2-padding-scale-factor);
 
-  div.photogallery h2 {
-    font-size: 2.5em;
-    line-height: 1.25em;
-    padding-left: 0.25em;
-    padding-right: 0.25em;
-  }
-  div.photogallery p {
-    font-size: 1.5em;
-    line-height: 1.1em;
-    margin-left: 0.25em;
-    margin-right: 0.25em;
-  }
+		@include set-selector-props(p, $main-base-p-font-size, $main-desktop-width-p-font-size-scale-factor,
+										$main-base-p-line-height, $main-desktop-width-p-line-height-scale-factor,
+										$main-base-p-margin, $main-desktop-width-p-margin-scale-factor);	
+
+		@include set-selector-img-props(0%, 1%, 1%, 1.4em);
+	}
+
+	// Nesting the div.photogallery class
+	div.photogallery {
+
+		@include set-selector-props(h2, $photo-base-h2-font-size, $photo-desktop-width-h2-font-size-scale-factor,
+										$photo-base-h2-line-height, $photo-desktop-width-h2-line-height-scale-factor,
+										$photo-base-h2-padding, $photo-desktop-width-h2-padding-scale-factor);
+
+		@include set-selector-props(p, $photo-base-p-font-size, $photo-desktop-width-p-font-size-scale-factor,
+										$photo-base-p-line-height, $photo-desktop-width-p-line-height-scale-factor,
+										$photo-base-p-margin, $photo-desktop-width-p-margin-scale-factor);
+	}
+
+	// Set col-1-2-4 properties
+	@include set-col-1-2-4-props(1.25em,1.02,1.02);
 
   .pondgallery {
     width: 50%;
     margin: 0 auto;
-  }
-
-  .col-1-2-4 h3 {
-    font-size: 1.25em;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .col-1-2-4 img:hover {
-    -moz-transform: scale(1.02, 1.02);
-    -ms-transform: scale(1.02, 1.02);
-    -webkit-transform: scale(1.02, 1.02);
-    transform: scale(1.02, 1.02);
-  }
+  }  
 }
+
 /* Tablet Screen Sizes */
 /* pixel range: $min-tablet-width - ($min-desktop-width - 1) */
 // Now using foundation breakpoint() mixin
 @media only screen and #{breakpoint(large)} and #{breakpoint(xlarge down)} {
-  /* Use the 1000px width background image in the header*/
-  header {
-    background: url(../images/sog-entrance-1000.jpg) no-repeat;
-    width: 1000px;
-    height: 300px;
-  }
 
-  main h2 {
-    font-size: 2.25em;
-    line-height: 1.2em;
-    padding-left: 0.2em;
-    padding-right: 0.2em;
-  }
-  main p {
-    font-size: 1.25em;
-    line-height: 1.15em;
-    margin-left: 0.2em;
-    margin-right: 0.2em;
-  }
-  main img {
-    padding-top: 1%;
-    padding-left: 1%;
-    margin-right: 1.3em;
-    float: left;
-  }
+	// Nesting the main tag
+	main {
 
-  div.photogallery h2 {
-    font-size: 2.25em;
-    line-height: 1.2em;
-    padding-left: 0.2em;
-    padding-right: 0.2em;
-  }
-  div.photogallery p {
-    font-size: 1.25em;
-    line-height: 1.15em;
-    margin-left: 0.2em;
-    margin-right: 0.2em;
-  }
+		@include set-selector-props(h2, $main-base-h2-font-size, $main-tablet-width-h2-font-size-scale-factor,
+										$main-base-h2-line-height, $main-tablet-width-h2-line-height-scale-factor,
+										$main-base-h2-padding, $main-tablet-width-h2-padding-scale-factor);
+
+		@include set-selector-props(p, $main-base-p-font-size, $main-tablet-width-p-font-size-scale-factor,
+										$main-base-p-line-height, $main-tablet-width-p-line-height-scale-factor,
+										$main-base-p-margin, $main-tablet-width-p-margin-scale-factor);	
+		img {
+			// Nest Padding Property
+			padding: {
+				top: $main-tablet-width-img-padding-top;
+				left: $main-tablet-width-img-padding-left;
+			}
+			margin-right: 1.3em;
+			float: left;
+		}
+	}
+
+	// Nesting the div.photogallery class
+	div.photogallery {
+
+		@include set-selector-props(h2, $photo-base-h2-font-size, $photo-tablet-width-h2-font-size-scale-factor,
+										$photo-base-h2-line-height, $photo-tablet-width-h2-line-height-scale-factor,
+										$photo-base-h2-padding, $photo-tablet-width-h2-padding-scale-factor);
+
+		@include set-selector-props(p, $photo-base-p-font-size, $photo-tablet-width-p-font-size-scale-factor,
+										$photo-base-p-line-height, $photo-tablet-width-p-line-height-scale-factor,
+										$photo-base-p-margin,$photo-tablet-width-p-margin-scale-factor);
+	}
+
+	// Set col-1-2-4 properties
+	@include set-col-1-2-4-props(1.1em,1.05,1.05);
 
   .pondgallery {
     width: 65%;
     margin: 0 auto;
   }
-
-  .col-1-2-4 h3 {
-    font-size: 1.1em;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .col-1-2-4 img:hover {
-    -moz-transform: scale(1.05, 1.05);
-    -ms-transform: scale(1.05, 1.05);
-    -webkit-transform: scale(1.05, 1.05);
-    transform: scale(1.05, 1.05);
-  }
 }
+
+
 /* Mobile Landscape Screen Sizes */
 /* pixel range: $min-phone-landscape-width - ($min-tablet-width - 1) */
 // Now using foundation breakpoint() mixin
 @media only screen and #{breakpoint(medium)} and #{breakpoint(large down)} {
-  /* Use the 800px width background image in the header*/
-  header {
-    background: url(../images/sog-entrance-800.jpg) no-repeat;
-    width: 800px;
-    height: 300px;
+
+  // Nesting the main tag
+  main {
+
+    @include set-selector-props(h2, $main-base-h2-font-size, $main-phone-landscape-width-h2-font-size-scale-factor,
+                    $main-base-h2-line-height, $main-phone-landscape-width-h2-line-height-scale-factor,
+                    $main-base-h2-padding, $main-phone-landscape-width-h2-padding-scale-factor);
+
+    @include set-selector-props(p, $main-base-p-font-size, $main-phone-landscape-width-p-font-size-scale-factor,
+                    $main-base-p-line-height, $main-phone-landscape-width-p-line-height-scale-factor,
+                    $main-base-p-margin, $main-phone-landscape-width-p-margin-scale-factor);
+    img {
+      // Nest img padding
+      padding: {
+        top: $main-phone-landscape-width-img-padding-top;
+        left: $main-phone-landscape-width-img-padding-left;
+      }
+      margin-right: 1em;
+      float: left;
+    }
   }
 
-  main h2 {
-    font-size: 1.75em;
-    line-height: 1.15em;
-    padding-left: 0.15em;
-    padding-right: 0.15em;
-  }
-  main p {
-    font-size: 1.1em;
-    line-height: 1.1em;
-    margin-left: 0.15em;
-    margin-right: 0.15em;
-  }
-  main img {
-    padding-top: 1%;
-    padding-left: 1%;
-    margin-right: 1em;
-    float: left;
+  // Nesting the div.photogallery class
+  div.photogallery {
+
+    @include set-selector-props(h2, $photo-base-h2-font-size, $photo-phone-landscape-width-h2-font-size-scale-factor,
+                    $photo-base-h2-line-height, $photo-phone-landscape-width-h2-line-height-scale-factor,
+                    $photo-base-h2-padding, $photo-phone-landscape-width-h2-padding-scale-factor);
+
+    @include set-selector-props(p, $photo-base-p-font-size, $photo-phone-landscape-width-p-font-size-scale-factor,
+                    $photo-base-p-line-height, $photo-phone-landscape-width-p-line-height-scale-factor,
+                    $photo-base-p-margin, $photo-phone-landscape-width-p-margin-scale-factor);
   }
 
-  div.photogallery h2 {
-    font-size: 1.75em;
-    line-height: 1.15em;
-    padding-left: 0.15em;
-    padding-right: 0.15em;
-  }
-  div.photogallery p {
-    font-size: 1.1em;
-    line-height: 1.1em;
-    margin-left: 0.15em;
-    margin-right: 0.15em;
-  }
+  // Set col-1-2-4 properties
+  @include set-col-1-2-4-props(1.25em,1.02,1.05);
 
   .pondgallery {
     width: 85%;
     margin: 0 auto;
-  }  
-
-  .col-1-2-4 h3 {
-    font-size: 1.25em;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .col-1-2-4 img:hover {
-    -moz-transform: scale(1.02, 1.05);
-    -ms-transform: scale(1.02, 1.05);
-    -webkit-transform: scale(1.02, 1.05);
-    transform: scale(1.02, 1.05);
-  }
+  }    
 }
+
 /* Mobile portrait Screen Sizes */
 /* pixel range: <= ($min-phone-landscape-width - 1) */
 // Now using foundation breakpoint() mixin
 @media only screen and #{breakpoint(medium down)} {
-  /* Use the 500px width background image in the header*/
-  header {
-    background: url(../images/sog-entrance-500.jpg) no-repeat;
-    width: 500px;
-    height: 255px;
-  }
-  header h1 {
-    padding: 0.5em;
-    margin: 0;
-  }
-  header h1 a {
-    color: #FFF;
-    text-decoration: none;
+  
+  // Nesting the header tag
+  header {  
+    h1 {
+      padding: 0.5em;
+      margin: 0;
+    }
+    h1 a {
+      color: $primary-header-text-color;
+      text-decoration: none;
+    }
   }
 
-  main h2 {
-    font-size: 1.5em;
-    line-height: 1.2em;
-    padding-left: 0.1em;
-    padding-right: 0.1em;
-  }
-  main p {
-    font-size: 1em;
-    line-height: 1.15em;
-    text-align: center;
-  }
-  main img {
-    width: 100%;
-    padding-top: 1%;
-    padding-left: 1%;
-    padding-right: 1%;
-    margin: 0 auto;
-    float: none;
+  // Nesting the main tag
+  main {
+
+    @include set-selector-props(h2, $main-base-h2-font-size, $main-phone-portrait-width-h2-font-size-scale-factor,
+                    $main-base-h2-line-height, $main-phone-portrait-width-h2-line-height-scale-factor,
+                    $main-base-h2-padding, $main-phone-portrait-width-h2-padding-scale-factor);
+    p {
+      font-size: 1em;
+      line-height: 1.15em;
+      text-align: center;
+    }
+    img {
+      width: 100%;
+      // Nest img padding
+      padding: {
+        top: $main-phone-portrait-width-img-padding-top;
+        left: $main-phone-portrait-width-img-padding-top;
+        right: $main-phone-portrait-width-img-padding-right;
+      }
+      margin: 0 auto;
+      float: none;
+    }
   }
 
-  div.photogallery h2 {
-    font-size: 1.5em;
-    line-height: 1.2em;
-    padding-left: 0.1em;
-    padding-right: 0.1em;
-  }
-  div.photogallery p {
-    font-size: 1em;
-    line-height: 1.15em;
-    text-align: center;
-  }
+  div.photogallery {
 
-  .pondgallery {
-    width: 95%;
-    margin: 0 auto;
+    @include set-selector-props(h2, $photo-base-h2-font-size, $photo-phone-portrait-width-h2-font-size-scale-factor,
+                    $photo-base-h2-line-height, $photo-phone-portrait-width-h2-line-height-scale-factor,
+                    $photo-base-h2-padding, $photo-phone-portrait-width-h2-padding-scale-factor);
+    p {
+      font-size: 1em;
+      line-height: 1.15em;
+      text-align: center;
+    }
   }
 
   .first_main_pic, .second_main_pic {
     float: none;
   }
 
-  .col-1-2-4 h3 {
-    font-size: 1.25em;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .col-1-2-4 p {
-    margin-left: 2%;
-    margin-right: 2%;
+  // Nesting the .col-1-2-4 class
+  .col-1-2-4 {
+    h3 {
+      font-size: 1.25em;
+      margin: 0 auto;
+      text-align: center;
+    }
+    p {
+      margin-left:2%;
+      margin-right:2%;
+    }
   }
 
-  [class*='col-'] {
-    width: 100%;
-    float: none;
-    margin-left: 0;
+  .pondgallery {
+    width: 95%;
+    margin: 0 auto;
   }
 }
