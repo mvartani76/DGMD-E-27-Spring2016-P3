@@ -50,7 +50,7 @@
 		</div>
 		<!-- Use Equalizer to make the main section and weather sidebar equal heights -->
 		<div class="row" data-equalizer>
-			<main class="xlarge-9 large-9 medium-9 small-12 columns login_id-background-color" data-equalizer-watch>
+			<main class="xlarge-9 large-9 medium-9 small-12 columns login_id-background-color" style="min-height:625px"data-equalizer-watch>
 				<form class="login_id" data-abide novalidate method="post">
 					<h3>Login</h3>
 					<h4>Please enter your username and password to login...</h4>
@@ -173,7 +173,6 @@
 		});
 	
 	</script>
-
     <!--<script src="js/vendor/jquery.min.js"></script>-->
     <script src="js/vendor/what-input.min.js"></script>
     <script src="js/foundation.min.js"></script>
