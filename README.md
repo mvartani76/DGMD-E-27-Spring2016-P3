@@ -72,3 +72,43 @@ The site has a navigation bar below the header image of each page. The navigatio
   </div>
 </div>
 ```
+## Form
+
+There are three forms pages in the side and they are located in the following files.<br>
+**login.php** - This is the login form page.<br>
+**register.php** - This is the registration form page.<br>
+**contact.php** - This is the contact form page.<br>
+
+All the forms use Javascript Abide form validation tool. The code snippet for the login form is shown below. This starts at 
+line 55 of **login.php**.
+```PHP
+<form class="login_id" data-abide novalidate method="post">
+	<h3>Login</h3>
+	<h4>Please enter your username and password to login...</h4>
+	<fieldset>
+		<input type="text" placeholder="Username" id="login_username" name="username" tabindex="1" required>
+		<!-- Throw an error message if username is not entered -->
+		<span class="form-error">
+			Username is required.
+		</span>
+	</fieldset>
+
+	<fieldset>
+		<input placeholder="Password" id="password" name="userpassword" type="password" tabindex="2" required>
+		<!-- Throw and error messiage if password is not entered -->
+		<span class="form-error">
+		  Password is required.
+		</span>
+	</fieldset>
+
+	<fieldset>
+		<!-- Use a callout to indicate to user that there are errors in the form -->
+		<div data-abide-error class="alert callout" style="display: none;">
+			<p class="callout.alert"><i class="fi-alert"></i> There are some errors in your form.</p>
+		</div>
+
+		<!-- Using Foundation Button class with customized color that I added to the color pallette -->
+		<button name="submit" type="submit" class="button my-secondary-background expanded" id="login_id-submit" data-submit="...Sending">Submit</button>
+	</fieldset>
+</form>
+```
