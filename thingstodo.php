@@ -242,7 +242,7 @@
 				sunsetTarget: '.weather-sunset',
 				placeTarget: '.weather-place',
 				iconTarget: '.weather-icon',
-				customIcons: '/images/icons/weather/',
+				customIcons: '/img/icons/weather/',
 				success: function() {
 				
 					//show weather
@@ -262,7 +262,6 @@
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/what-input.min.js"></script>
     <script src="js/foundation.min.js"></script>
-    <script src="js/app.js"></script>			
-</body>		
+    <script src="js/app.js"></script>
 </body>
 </html>

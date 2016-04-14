@@ -180,7 +180,7 @@
 				sunsetTarget: '.weather-sunset',
 				placeTarget: '.weather-place',
 				iconTarget: '.weather-icon',
-				customIcons: '/images/icons/weather/',
+				customIcons: '/img/icons/weather/',
 				success: function() {
 				
 					//show weather
