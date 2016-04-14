@@ -148,7 +148,7 @@
 			<!-- Added the xxx-push-3 class which moves this column right 25% to make this display (xxx-3)
 			     display in the right for screen sizes >479px
 			     For screen sizes <=479px, they will display in normal order as written. -->
-			<div class="xlarge-3 large-3 medium-3 xlarge-push-3 large-push-3 medium-push-3 columns outside-w-wrapper" data-equalizer-watch>
+			<div class="xlarge-3 large-3 medium-3 xlarge-push-3 large-push-3 medium-push-3 columns outside-w-wrapper hide-for-small-only" data-equalizer-watch>
 				<h3>Local Time &amp; Weather</h3>
 				<p>
 					<?php

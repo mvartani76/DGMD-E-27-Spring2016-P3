@@ -81,7 +81,7 @@
 					</fieldset>
 				</form>
 			</main>
-			<div class="outside-w-wrapper xlarge-3 large-3 medium-3 columns" data-equalizer-watch>
+			<div class="outside-w-wrapper xlarge-3 large-3 medium-3 columns hide-for-small-only" data-equalizer-watch>
 				<h3>Local Time &amp; Weather</h3>
 				<p>
 					<?php

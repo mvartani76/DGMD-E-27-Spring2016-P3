@@ -76,7 +76,7 @@
 				<p>We are an active community of families, young couples, empty-nesters, and other lively people who enjoy a peaceful atmosphere and close proximity to city attractions and water recreation areas.</p>
 
 			</main>
-			<div class="outside-w-wrapper xlarge-3 large-3 medium-3 columns">
+			<div class="outside-w-wrapper xlarge-3 large-3 medium-3 columns hide-for-small-only">
 				<h3>Local Time &amp; Weather</h3>
 				<p>
 					<?php
