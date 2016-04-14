@@ -9,42 +9,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/app.css" />
 	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<!-- Specific code for configuring the openweather data to the subdivision location -->
-	<script src="/js/openWeather.js"></script>
-	<script>
-		$(function() {
-		
-			$('.weather-temperature').openWeather({
-				key: '1ae2a03185008da881e3c6cf3c53b1fc',
-				city: 'Commerce Township, MI',
-				units: 'f',
-				descriptionTarget: '.weather-description',
-				windSpeedTarget: '.weather-wind-speed',
-				minTemperatureTarget: '.weather-min-temperature',
-				maxTemperatureTarget: '.weather-max-temperature',
-				humidityTarget: '.weather-humidity',
-				sunriseTarget: '.weather-sunrise',
-				sunsetTarget: '.weather-sunset',
-				placeTarget: '.weather-place',
-				iconTarget: '.weather-icon',
-				customIcons: '/img/icons/weather/',
-				success: function() {
-				
-					//show weather
-					$('.weather-wrapper').show();
-					
-				},
-				error: function(message) {
-				
-					console.log(message);
-				
-				}
-			});
-			
-		});
-	
-	</script>	
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>    
   </head>
   <body>
 	<div class="wrapper">
@@ -85,7 +50,7 @@
 		</div>
 		<!-- Use Equalizer to make the main section and weather sidebar equal heights -->
 		<div class="row" data-equalizer>
-			<main class="xlarge-9 large-9 medium-9 small-12 columns login_id-background-color" data-equalizer-watch>
+			<main class="xlarge-9 large-9 medium-9 small-12 columns login_id-background-color login-min-height" data-equalizer-watch>
 				<form class="login_id" data-abide novalidate method="post">
 					<h3>Login</h3>
 					<h4>Please enter your username and password to login...</h4>
@@ -173,7 +138,41 @@
 	    </footer>
 	</div>
 
-
+	<!-- Specific code for configuring the openweather data to the subdivision location -->
+	<script src="/js/openWeather.js"></script>
+	<script>
+		$(function() {
+		
+			$('.weather-temperature').openWeather({
+				key: '1ae2a03185008da881e3c6cf3c53b1fc',
+				city: 'Commerce Township, MI',
+				units: 'f',
+				descriptionTarget: '.weather-description',
+				windSpeedTarget: '.weather-wind-speed',
+				minTemperatureTarget: '.weather-min-temperature',
+				maxTemperatureTarget: '.weather-max-temperature',
+				humidityTarget: '.weather-humidity',
+				sunriseTarget: '.weather-sunrise',
+				sunsetTarget: '.weather-sunset',
+				placeTarget: '.weather-place',
+				iconTarget: '.weather-icon',
+				customIcons: '/img/icons/weather/',
+				success: function() {
+				
+					//show weather
+					$('.weather-wrapper').show();
+					
+				},
+				error: function(message) {
+				
+					console.log(message);
+				
+				}
+			});
+			
+		});
+	
+	</script>
     <!--<script src="js/vendor/jquery.min.js"></script>-->
     <script src="js/vendor/what-input.min.js"></script>
     <script src="js/foundation.min.js"></script>
