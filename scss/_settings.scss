@@ -214,7 +214,8 @@ $accordion-content-padding: 1rem;
 // -----------------
 
 $accordionmenu-arrows: true;
-$accordionmenu-arrow-color: $primary-color;
+//$accordionmenu-arrow-color: $primary-color;
+$accordionmenu-arrow-color: $menu-toggle-hover-active-color;
 
 // 9. Badge
 // --------
