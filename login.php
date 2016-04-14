@@ -49,35 +49,38 @@
 				</ul>			
 			</div>
 		</div>
+		<!-- Use Equalizer to make the main section and weather sidebar equal heights -->
 		<div class="row" data-equalizer>
 			<main class="xlarge-9 large-9 medium-9 small-12 columns login_id-background-color" data-equalizer-watch>
-		  
-			  		<form class="login_id" data-abide novalidate method="post">
-						<h3>Login</h3>
-			    		<h4>Please enter your username and password to login...</h4>
-			    		<fieldset><input type="text" placeholder="Username" id="login_username" name="username" tabindex="1" required>
-
+				<form class="login_id" data-abide novalidate method="post">
+					<h3>Login</h3>
+					<h4>Please enter your username and password to login...</h4>
+					<fieldset>
+						<input type="text" placeholder="Username" id="login_username" name="username" tabindex="1" required>
+						<!-- Throw an error message if username is not entered -->
 						<span class="form-error">
 							Username is required.
 						</span>
-						</fieldset>
+					</fieldset>
 
-			    		<fieldset><input placeholder="Password" id="password" name="userpassword" type="password" tabindex="2" required>
-
+					<fieldset>
+						<input placeholder="Password" id="password" name="userpassword" type="password" tabindex="2" required>
+						<!-- Throw and error messiage if password is not entered -->
 						<span class="form-error">
-							Password is required.
+						Password is required.
 						</span>
-						</fieldset>
+					</fieldset>
 
-			    		<fieldset>
-
+					<fieldset>
+						<!-- Use a callout to indicate to user that there are errors in the form -->
 						<div data-abide-error class="alert callout" style="display: none;">
 							<p class="callout.alert"><i class="fi-alert"></i> There are some errors in your form.</p>
 						</div>
 
-			      		<button name="submit" type="submit" class="button my-secondary-background expanded" id="login_id-submit" data-submit="...Sending">Submit</button>
-			    		</fieldset>
-			  		</form>
+						<!-- Using Foundation Button class with customized color that I added to the color pallette -->
+						<button name="submit" type="submit" class="button my-secondary-background expanded" id="login_id-submit" data-submit="...Sending">Submit</button>
+					</fieldset>
+				</form>
 			</main>
 			<div class="outside-w-wrapper xlarge-3 large-3 medium-3 columns" data-equalizer-watch>
 				<h3>Local Time &amp; Weather</h3>
@@ -90,7 +93,6 @@
 					echo "$mydate[weekday], $mydate[month] $mydate[mday], $mydate[year]";
 					echo "<br>";
 					
-	   				
 	   				$currenttime = date('h:i A');
 	   				echo date('h:i A',strtotime($currenttime));
 	   				echo "<br>";
