@@ -26,7 +26,7 @@
 
 // Nesting for outside-w-wrapper
 .outside-w-wrapper {
-
+	display: inline-block;
 	background-color: $weather-outside-wrapper-background-color;
 	text-align: center;
 

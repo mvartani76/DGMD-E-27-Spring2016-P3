@@ -6543,6 +6543,7 @@ aside {
     color: #FFF; }
 
 .outside-w-wrapper {
+  display: inline-block;
   background-color: #EEDFAF;
   text-align: center; }
   .outside-w-wrapper h3 {
