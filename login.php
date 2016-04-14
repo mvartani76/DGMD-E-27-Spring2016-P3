@@ -31,15 +31,15 @@
 
 		<div class="row">
 			<div class="top-bar" id="nav-menu">
-				<ul class="menu dropdown expanded" data-dropdown-menu>
+				<ul class=" medium-horizontal vertical dropdown menu" data-responsive-menu="accordion medium-dropdown">
 					<li><a href="./index.php">Home</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="./thingstodo.php">Things to Do</a></li>
 					<li><a href="./photogallery.php">Photo Gallery</a></li>
 					<!-- Login/Register is a dropdown menu and contains submenus for Login and Register
 						 Added "non-active" class to have only the selected sub-menu page to be highlighted in the menu -->
-					<li class=".is-dropdown-submenu-parent active"><a href="#">Login/Register</a>
-					    <ul class="menu">
+					<li class="has-submenu active"><a href="#">Login/Register</a>
+						<ul class="submenu menu vertical nested" data-submenu>
       						<li class="active"><a href="./login.php">Login</a></li>
       						<li class="non-active"><a href="./register.php">Register</a></li>
     					</ul>
@@ -48,6 +48,7 @@
 				</ul>			
 			</div>
 		</div>
+
 		<!-- Use Equalizer to make the main section and weather sidebar equal heights -->
 		<div class="row" data-equalizer>
 			<main class="xlarge-9 large-9 medium-9 small-12 columns login_id-background-color login-min-height" data-equalizer-watch>

@@ -6571,9 +6571,7 @@ strong {
 
 .menu {
   margin: 0;
-  padding: 0;
-  list-style-type: none;
-  overflow: auto; }
+  padding: 0; }
 
 .menu li {
   font-family: 'Lato', sans-serif; }
@@ -6581,8 +6579,7 @@ strong {
 .menu a {
   color: #FFF;
   text-decoration: none;
-  font-weight: bold;
-  float: left; }
+  font-weight: bold; }
 
 .menu a:hover, .menu li.active a {
   color: #a16100; }

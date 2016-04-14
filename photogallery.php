@@ -30,16 +30,15 @@
 		</div>
 
 		<div class="row">
-			<!--<div class="menu large-12 columns">-->
 			<div class="top-bar" id="nav-menu">
-				<ul class="menu dropdown expanded" data-dropdown-menu>
+				<ul class=" medium-horizontal vertical dropdown menu" data-responsive-menu="accordion medium-dropdown">
 					<li><a href="./index.php">Home</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="./thingstodo.php">Things to Do</a></li>
 					<li class="active"><a href="./photogallery.php">Photo Gallery</a></li>
 					<!-- Login/Register is a dropdown menu and contains submenus for Login and Register -->
-					<li class=".is-dropdown-submenu-parent"><a href="#">Login/Register</a>
-					    <ul class="menu vertical">
+					<li class="has-submenu"><a href="#">Login/Register</a>
+						<ul class="submenu menu vertical nested" data-submenu>
       						<li><a href="./login.php">Login</a></li>
       						<li><a href="./register.php">Register</a></li>
     					</ul>
