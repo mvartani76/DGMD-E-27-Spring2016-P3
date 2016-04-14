@@ -173,10 +173,16 @@ div.col-1-2-4 {
 	// Set col-1-2-4 properties
 	@include set-col-1-2-4-props(1.25em,1.02,1.02);
 
-  .pondgallery {
-    width: 50%;
-    margin: 0 auto;
-  }  
+	// Adjust orbit gallery width based on screen width
+	.pondgallery {
+		width: 50%;
+		margin: 0 auto;
+	}
+
+	// Set main login div min height depending on screen width
+	.login-min-height {
+		min-height: 625px;
+	}
 }
 
 /* Tablet Screen Sizes */
@@ -220,10 +226,16 @@ div.col-1-2-4 {
 	// Set col-1-2-4 properties
 	@include set-col-1-2-4-props(1.1em,1.05,1.05);
 
-  .pondgallery {
-    width: 65%;
-    margin: 0 auto;
-  }
+	// Adjust orbit gallery width based on screen width
+	.pondgallery {
+		width: 65%;
+		margin: 0 auto;
+	}
+
+	// Set main login div min height depending on screen width
+	.login-min-height {
+		min-height: 625px;
+	}
 }
 
 
@@ -268,10 +280,16 @@ div.col-1-2-4 {
   // Set col-1-2-4 properties
   @include set-col-1-2-4-props(1.25em,1.02,1.05);
 
-  .pondgallery {
-    width: 85%;
-    margin: 0 auto;
-  }    
+	// Adjust orbit gallery width based on screen width
+	.pondgallery {
+		width: 85%;
+		margin: 0 auto;
+	}
+
+	// Set main login div min height depending on screen width
+	.login-min-height {
+		min-height: 625px;
+	}  
 }
 
 /* Mobile portrait Screen Sizes */
@@ -344,8 +362,15 @@ div.col-1-2-4 {
     }
   }
 
-  .pondgallery {
-    width: 95%;
-    margin: 0 auto;
-  }
+	.pondgallery {
+		width: 95%;
+		margin: 0 auto;
+	}
+
+	// Set main login div min height depending on screen width
+	// As weather bar is not shown in small screen size, set min-height very small
+	.login-min-height {
+		min-height: 25px;
+	}  
+
 }
