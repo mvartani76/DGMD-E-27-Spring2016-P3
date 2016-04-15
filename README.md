@@ -49,7 +49,7 @@ The site incorporates a responsive grid system using the foundation framework.<b
 The site utilizes the **Source Ordering** feature in **thingstodo.php** to move the order of the columns around between the small (mobile portrait) and large (desktop) screen widths.<br>
 In all screen widths besides small (mobile portrait), the aside showing the township information is the leftmost column, the main section is in the middle, and the weather bar is on the right. In the small (mobile portrait) screen width, the main section is effectively the leftmost column as it is shown on top while the township information is on the right since it is below. The weather bar is hidden for small screen widths so is not shown.<br>
 
-The code snippet starting at line 50 of **thingstodo.php** shown below shows how the main section is setup.
+The code snippet starting at **line 50** of **thingstodo.php** shown below shows how the main section is setup.
 ```HTML
 <!-- Added the xxx-push-3 class which moves this column right 25% to make this display (xxx-6)
 display in the middle for screen sizes >479px.
@@ -61,7 +61,7 @@ For screen sizes <=479px, they will display in normal order as written. -->
 ```
 The main section is six (6) columns wide and is pushed right three (3) columns for all screen widths except small.<br>
 
-The code snippet starting at line 148 of **thingstodo.php** shown below shows how the weather bar is setup.
+The code snippet starting at **line 148** of **thingstodo.php** shown below shows how the weather bar is setup.
 ```HTML
 <!-- Added the xxx-push-3 class which moves this column right 25% to make this display (xxx-3)
 display in the right for screen sizes >479px
@@ -73,7 +73,7 @@ For screen sizes <=479px, they will display in normal order as written. -->
 ```
 The weather bar is three (3) columns wide and is pushed right three (3) columns for all screen widths except small.<br>
 
-The code snippet starting at **line 201** of **thingstodo.php** shown below shows how the <aside> is setup.
+The code snippet starting at **line 201** of **thingstodo.php** shown below shows how the `<aside>` is setup.
 ```HTML
 <!-- Added the col-pull-9 class which moves this column left 75% to make this display (xxx-3)
 display in the left for screen sizes >479px
@@ -93,7 +93,7 @@ For screen sizes <=479px, they will display in normal order as written. -->
 	</ul>
 </aside>
 ```
-The <aside> is three (3) columns wide and is pulled left nine (9) columns for all screen widths except small. This effectively puts it as the leftmost column for all screen widths except small.<br>
+The `<aside>` is three (3) columns wide and is pulled left nine (9) columns for all screen widths except small. This effectively puts it as the leftmost column for all screen widths except small.<br>
 
 ## Navigation
 
