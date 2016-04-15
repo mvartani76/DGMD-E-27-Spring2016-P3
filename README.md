@@ -43,6 +43,58 @@ The URL for Assignment 2 is: http://dgmd-e27-p2.mikevartanian.me/index.php<br>
 The comments and code for Assignment 1 are located in GitHub here: https://github.com/mvartani76/DGMD-E-27-Spring2016-P1<br>
 The comments and code for Assignment 2 are located in GitHub here: https://github.com/mvartani76/DGMD-E-27-Spring2016-P2<br>
 
+## Grid
+
+The site incorporates a responsive grid system using the foundation framework.<br>
+The site utilizes the **Source Ordering** feature in **thingstodo.php** to move the order of the columns around between the small (mobile portrait) and large (desktop) screen widths.<br>
+In all screen widths besides small (mobile portrait), the aside showing the township information is the leftmost column, the main section is in the middle, and the weather bar is on the right. In the small (mobile portrait) screen width, the main section is effectively the leftmost column as it is shown on top while the township information is on the right since it is below. The weather bar is hidden for small screen widths so is not shown.<br>
+
+The code snippet starting at line 50 of **thingstodo.php** shown below shows how the main section is setup.
+```HTML
+<!-- Added the xxx-push-3 class which moves this column right 25% to make this display (xxx-6)
+display in the middle for screen sizes >479px.
+For screen sizes <=479px, they will display in normal order as written. -->
+<main class="xlarge-6 large-6 medium-6 xlarge-push-3 large-push-3 medium-push-3 columns" data-equalizer-watch>
+	<h2>Things to Do in Commerce Township</h2>
+	...
+</main>
+```
+The main section is six (6) columns wide and is pushed right three (3) columns for all screen widths except small.<br>
+
+The code snippet starting at line 148 of **thingstodo.php** shown below shows how the weather bar is setup.
+```HTML
+<!-- Added the xxx-push-3 class which moves this column right 25% to make this display (xxx-3)
+display in the right for screen sizes >479px
+For screen sizes <=479px, they will display in normal order as written. -->
+<div class="xlarge-3 large-3 medium-3 xlarge-push-3 large-push-3 medium-push-3 columns outside-w-wrapper hide-for-small-only" data-equalizer-watch>
+	<h3>Local Time &amp; Weather</h3>
+	...
+</div>
+```
+The weather bar is three (3) columns wide and is pushed right three (3) columns for all screen widths except small.<br>
+
+The code snippet starting at **line 201** of **thingstodo.php** shown below shows how the <aside> is setup.
+```HTML
+<!-- Added the col-pull-9 class which moves this column left 75% to make this display (xxx-3)
+display in the left for screen sizes >479px
+For screen sizes <=479px, they will display in normal order as written. -->
+<aside class="xlarge-3 large-3 medium-3 xlarge-pull-9 large-pull-9 medium-pull-9 columns" data-equalizer-watch>
+	<h3>Commerce Township Info</h3>
+	<ul>
+		<li><a href="https://en.wikipedia.org/wiki/Commerce_Township,_Michigan" target="_blank">Population:</a> 40,186</li>
+		<li><a href="https://en.wikipedia.org/wiki/Commerce_Township,_Michigan" target="_blank">Total Area:</a> 29.8 square miles</li>
+		<li><a href="http://www.distance-cities.com/distance-detroit-mi-to-commerce-township-mi" target="_blank">Miles northwest from Detroit:</a> 28</li>
+		<li><a href="https://en.wikipedia.org/wiki/Commerce_Township,_Michigan" target="_blank">Number of Households:</a> 12,379</li>
+		<li><a href="https://en.wikipedia.org/wiki/Commerce_Township,_Michigan" target="_blank">Number of Families:</a> 9,754</li>
+		<li><a href="https://en.wikipedia.org/wiki/Commerce_Township,_Michigan" target="_blank">Median Household Income:</a> $72,702</li>
+		<li><a href="https://en.wikipedia.org/wiki/Commerce_Township,_Michigan" target="_blank">Median Family Income:</a> $79,976</li>
+		<li><a href="https://en.wikipedia.org/wiki/Commerce_Township,_Michigan" target="_blank">Median Age:</a> 36 years</li>
+		<li><a href="https://en.wikipedia.org/wiki/Commerce_Township,_Michigan" target="_blank">Number of School Districts:</a> 2</li>
+	</ul>
+</aside>
+```
+The <aside> is three (3) columns wide and is pulled left nine (9) columns for all screen widths except small. This effectively puts it as the leftmost column for all screen widths except small.<br>
+
 ## Navigation
 
 The site has a navigation bar below the header image of each page. The navigation bar is responsive and toggles (uses a hamburger button) for the small screen size. The navigation bar is also expanded, incorpartes top-bar adn the dropdown features. The code below shows the navigation bar for **index.php** (starting at line 28 in **index.php**).
