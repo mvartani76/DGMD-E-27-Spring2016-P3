@@ -16,7 +16,7 @@
 	
 		<!-- Replaced header with row div as this seems to allow the header image to stay
 			 adjacent to the menu when scaling to the different screen sizes. -->
-		<div class=" row xlarge-12 large-12 medium-12 columns">
+		<div class="row">
 			<img data-interchange="[img/sog-entrance-500.jpg, small], 
 				[img/sog-entrance-800.jpg, medium], 
 				[img/sog-entrance-1000.jpg, large], 
