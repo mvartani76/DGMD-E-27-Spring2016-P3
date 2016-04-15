@@ -125,7 +125,7 @@ The site has a navigation bar below the header image of each page. The navigatio
 </div>
 ```
 ## Styling
-The site incorporates many of the different style elements in the site.
+The site incorporates many of the different foundation style elements in the site.
 ### Button
 The form pages all incorporate a button for submission of the form.<br>
 An example of an expanded button using a custom color from **login.php** is shown below.
@@ -152,7 +152,14 @@ The form pages also all incorporate a callout to indicate to the user that if th
 </fieldset>
 ```
 We see the callout implemented in the parent div and paragraph. The parent div callout is from *line 76** of **register.php**. Similar examples of callouts are located in **login.php** and **contact.php**.
-
+### Visibility Classes
+The site uses visibility classes primarily to hide the weather bar in the small screen width as shown in the code snippet starting at **line 107** of **contact.php**.
+```HTML
+<div class="outside-w-wrapper xlarge-3 large-3 medium-3 columns hide-for-small-only" data-equalizer-watch>
+	<h3>Local Time &amp; Weather</h3>
+	...
+</div>
+```
 ## Form
 
 There are three forms pages in the side and they are located in the following files.<br>
@@ -161,7 +168,7 @@ There are three forms pages in the side and they are located in the following fi
 **contact.php** - This is the contact form page.<br>
 
 All the forms use Javascript Abide form validation tool. The code snippet for the login form is shown below. This starts at 
-line 55 of **login.php**.
+**line 55** of **login.php**.
 ```PHP
 <form class="login_id" data-abide novalidate method="post">
 	<h3>Login</h3>
