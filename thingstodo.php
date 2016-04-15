@@ -48,7 +48,7 @@
 			</div>
 		</div>
 		<div class="row" data-equalizer>
-			<!-- Added the col-push-1 class which moves this column right 25% to make this display (col-2)
+			<!-- Added the xxx-push-3 class which moves this column right 25% to make this display (xxx-6)
 			     display in the middle for screen sizes >479px.
 			     For screen sizes <=479px, they will display in normal order as written. -->
 			<main class="xlarge-6 large-6 medium-6 xlarge-push-3 large-push-3 medium-push-3 columns" data-equalizer-watch>
@@ -198,7 +198,7 @@
 				</div>
 			</div>
 
-			<!-- Added the col-pull-3 class which moves this column left 75% to make this display (col-1)
+			<!-- Added the col-pull-9 class which moves this column left 75% to make this display (xxx-3)
 			     display in the left for screen sizes >479px
 			     For screen sizes <=479px, they will display in normal order as written. -->
 			<aside class="xlarge-3 large-3 medium-3 xlarge-pull-9 large-pull-9 medium-pull-9 columns" data-equalizer-watch>
