@@ -124,6 +124,35 @@ The site has a navigation bar below the header image of each page. The navigatio
   </div>
 </div>
 ```
+## Styling
+The site incorporates many of the different style elements in the site.
+### Button
+The form pages all incorporate a button for submission of the form.<br>
+An example of an expanded button using a custom color from **login.php** is shown below.
+```HTML
+<fieldset>
+	<!-- Use a callout to indicate to user that there are errors in the form -->
+	<div data-abide-error class="alert callout" style="display: none;">
+		<p class="callout.alert"><i class="fi-alert"></i> There are some errors in your form.</p>
+	</div>
+
+	<!-- Using Foundation Button class with customized color that I added to the color pallette -->
+	<button name="submit" type="submit" class="button my-secondary-background expanded" id="login_id-submit" data-submit="...Sending">Submit</button>
+</fieldset>
+```
+The button is declared on **line 81** of **login.php**.  Similar examples of the button are located in **register.php** and **contact.php**.
+### Callout
+The form pages also all incorporate a callout to indicate to the user that if there are errors in the form. An example of a callout using a custom color from **register.php** is shown below.
+```HTML
+<fieldset>
+	<div data-abide-error class="alert callout" style="display: none;">
+		<p class="callout.alert"><i class="fi-alert"></i> There are some errors in your form.</p>
+	</div>				    
+	<button name="submit" type="submit" class="button my-secondary-background expanded" id="register-submit" data-submit="...Sending">Submit</button>
+</fieldset>
+```
+We see the callout implemented in the parent div and paragraph. The parent div callout is from *line 76** of **register.php**. Similar examples of callouts are located in **login.php** and **contact.php**.
+
 ## Form
 
 There are three forms pages in the side and they are located in the following files.<br>
