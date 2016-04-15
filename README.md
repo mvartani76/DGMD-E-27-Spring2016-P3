@@ -295,4 +295,23 @@ The Orbit gallery Javascript widget is implemented starting on **line 56** of **
 	</nav>
 </div>
 ```
-Please note that I customized the styling of the orbit buttons.
+Please note that I customized the styling of the orbit buttons as shown starting on **line 420** of **_settings.scss** in the code snippet below.
+```SCSS
+// 25. Orbit
+// ---------
+
+//$orbit-bullet-background: $medium-gray;
+$orbit-bullet-background: $secondary-background-color;
+//$orbit-bullet-background-active: $dark-gray;
+$orbit-bullet-background-active: $menu-toggle-hover-active-color;
+$orbit-bullet-diameter: 1.2rem;
+$orbit-bullet-margin: 0.1rem;
+$orbit-bullet-margin-top: 0.8rem;
+$orbit-bullet-margin-bottom: 0.8rem;
+$orbit-caption-background: rgba($black, 0.5);
+$orbit-caption-padding: 1rem;
+$orbit-control-background-hover: rgba($black, 0.5);
+$orbit-control-padding: 1rem;
+$orbit-control-zindex: 10;
+```
+Here you can see that I changed `$orbit-bullet-background` and `$orbit-bullet-background-active` to colors that matched my site. I also commented out the previous values as we were told to do in the videos.
