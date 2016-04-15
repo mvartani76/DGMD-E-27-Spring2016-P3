@@ -97,7 +97,7 @@ The `<aside>` is three (3) columns wide and is pulled left nine (9) columns for 
 
 ## Navigation
 
-The site has a navigation bar below the header image of each page. The navigation bar is responsive and toggles (uses a hamburger button) for the small screen size. The navigation bar is also expanded, incorpartes top-bar adn the dropdown features. The code below shows the navigation bar for **index.php** (starting at line 28 in **index.php**).
+The site has a navigation bar below the header image of each page. The navigation bar is responsive and toggles (uses a hamburger button) for the small screen size. The navigation bar is also expanded, incorporates top-bar and the dropdown features. The code below shows the navigation bar for **index.php** (starting at **line 28** in **index.php**).
 
 ```HTML
 <div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="medium">
@@ -315,3 +315,30 @@ $orbit-control-padding: 1rem;
 $orbit-control-zindex: 10;
 ```
 Here you can see that I changed `$orbit-bullet-background` and `$orbit-bullet-background-active` to colors that matched my site. I also commented out the previous values as we were told to do in the videos.
+
+## Equalizer
+The Equalizer JavaScript widget is used throughout the site to make the column heights the same. Initially I had just used it for the photos and corresponding paragraph text in **photogallery.php** but I expanded the usage to all other pages too give the site a cleaner look so the column color extended all the way to the bottom (for example in any of the form pages such as **register.php**). The Equalizer code snippet starts on **line 55** of **photogallery.php** and is shown below.
+```HTML
+<div class="row" data-equalizer>
+	<div class="col-1-2-4 large-3 medium-6 columns" data-equalizer-watch>
+		<h3>The Nature Preserve</h3>
+		<a href="#"><img src="img/sog-preserve-entrance-250.jpg" alt="Our Nature Preserve"></a>
+		<p>We are so lucky to have a state nature preserve with a forest, lake and a river with lots of natural wildlife.</p>
+	</div>
+	<div class="col-1-2-4 large-3 medium-6 columns" data-equalizer-watch>
+		<h3>The Front Pond</h3>
+		<a href="./thepondgallery.php"><img src="img/sog-pond-winter-350.jpg" alt="The Front Pond"></a>
+		<p>The pond near our subdivision entrance way is both beautiful as well as a source for winter enjoyment.</p>
+	</div>
+	<div class="col-1-2-4 large-3 medium-6 columns" data-equalizer-watch>
+		<h3>Night Time</h3>
+		<a href="#"><img src="img/sog-entrance-night-250.jpg" alt="Night Time"></a>
+		<p>The beauty of our neighborhood at night during the holidays...</p>
+	</div>
+	<div class="col-1-2-4 large-3 medium-6 columns" data-equalizer-watch>
+		<h3>Our Houses</h3>
+		<a href="#"><img src="img/sog-houses-300.jpg" alt="Our Houses"></a>
+		<p>We have many beautiful houses in our neighborhood. Please see pictures of the houses that our residents have shared.</p>
+	</div>
+</div>
+```
