@@ -151,7 +151,7 @@ The form pages also all incorporate a callout to indicate to the user that if th
 	<button name="submit" type="submit" class="button my-secondary-background expanded" id="register-submit" data-submit="...Sending">Submit</button>
 </fieldset>
 ```
-We see the callout implemented in the parent div and paragraph. The parent div callout is from *line 76** of **register.php**. Similar examples of callouts are located in **login.php** and **contact.php**.
+We see the callout implemented in the parent div and paragraph. The parent div callout is from **line 76** of **register.php**. Similar examples of callouts are located in **login.php** and **contact.php**.
 ### Visibility Classes
 The site uses visibility classes primarily to hide the weather bar in the small screen width as shown in the code snippet starting at **line 107** of **contact.php**.
 ```HTML
@@ -199,4 +199,16 @@ All the forms use Javascript Abide form validation tool. The code snippet for th
 		<button name="submit" type="submit" class="button my-secondary-background expanded" id="login_id-submit" data-submit="...Sending">Submit</button>
 	</fieldset>
 </form>
+```
+## Interchange
+Interchange is used for all images throughout the site to make them responsive.<br>
+The "header" image uses interchange in each source file to change the source image for the various screen widths. One example of this is shown starting on **line 19** of **index.php**.
+```HTML
+<div class="row">
+	<img data-interchange="[img/sog-entrance-500.jpg, small], 
+		[img/sog-entrance-800.jpg, medium], 
+		[img/sog-entrance-1000.jpg, large], 
+		[img/sog-entrance-1200.jpg, xlarge]">
+	<noscript><img src="img/sog-entrance-800.jpg.jpg"></noscript>
+</div>
 ```
