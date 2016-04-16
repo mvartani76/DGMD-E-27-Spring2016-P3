@@ -362,3 +362,50 @@ As mentioned in the Navigation section above, the site incorporates the dropdown
 	</ul>
 </div>
 ```
+## SASS Modifications
+In order to customize the look of the site, there were several changes made to **_settings.scss** and **app.scss** as well as including several other partial files. These other partial files were from the P2 but were source files so I needed to some slight modifications to include them as partials.
+
+### Changes to app.scss
+The code snippet below shows the addition of extra custom partial stylesheets. This starts on **line 52** of **app.scss**.
+```SCSS
+// Custom partial stylesheets
+@import 'mixins';
+@import 'styles';
+@import 'formstyle';
+@import 'thingstodo';
+@import 'weather-style';
+// Include partial for overriding foundation settings
+@import 'overrides';
+```
+### Changes to _settings.scss
+1. The first change was to include a partial file, **_variables.scss** to the top so all the variable declarations would be recognized in **_settings.scss**. This is shown on **line 44** below.
+```SCSS
+@import 'variables';
+```
+2. The second change was to update `$foundation-palette` to include some of my custom colors for the buttons. This is shown starting on **line 52** below.
+```SCSS
+$foundation-palette: (
+  primary: #2199e8,
+  secondary: #777,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #ec5840,
+  my-primary-background: $primary-background-color,
+  my-secondary-background: $secondary-background-color,
+);
+```
+3. The third change was to update the breakpoints. This is shown starting on **line 84** below.
+```SCSS
+$breakpoints: (
+  small: 0,
+  medium: $min-phone-landscape-width,
+  medium_bk2: $min-phone-width-breakpoint2,
+  medium_bk1: $min-phone-width-breakpoint1,
+  large: $min-tablet-width,
+  large_bk1: $min-tablet-width-breakpoint1,
+  xlarge: $min-desktop-width,
+  xlarge_bk1: $min-desktop-width-breakpoint1,
+  xxlarge: 1440px,
+);
+$breakpoint-classes: (small medium medium_bk1 medium_bk2 large large_bk1 xlarge xlarge_bk1);
+```
