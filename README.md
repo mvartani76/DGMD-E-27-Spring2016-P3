@@ -378,11 +378,13 @@ The code snippet below shows the addition of extra custom partial stylesheets. T
 @import 'overrides';
 ```
 ### Changes to _settings.scss
-1. The first change was to include a partial file, **_variables.scss** to the top so all the variable declarations would be recognized in **_settings.scss**. This is shown on **line 44** below.
+#### Include variables partial file
+The first change was to include a partial file, **_variables.scss** to the top so all the variable declarations would be recognized in **_settings.scss**. This is shown on **line 44** below.
 ```SCSS
 @import 'variables';
 ```
-2. The second change was to update `$foundation-palette` to include some of my custom colors for the buttons. This is shown starting on **line 52** below.
+#### Update $foundation-palette
+The second change was to update `$foundation-palette` to include some of my custom colors for the buttons. This is shown starting on **line 52** below.
 ```SCSS
 $foundation-palette: (
   primary: #2199e8,
@@ -394,7 +396,8 @@ $foundation-palette: (
   my-secondary-background: $secondary-background-color,
 );
 ```
-3. The third change was to update the breakpoints. This is shown starting on **line 84** below.
+#### Update Breakpoints
+The third change was to update the breakpoints. This is shown starting on **line 84** below.
 ```SCSS
 $breakpoints: (
   small: 0,
@@ -409,3 +412,78 @@ $breakpoints: (
 );
 $breakpoint-classes: (small medium medium_bk1 medium_bk2 large large_bk1 xlarge xlarge_bk1);
 ```
+#### Change Accordion Menu Arrow Color
+The fourth change was to change the accordion menu arrow color to match the style of the site as shown starting on **line 213** below.
+```SCSS
+// 8. Accordion Menu
+// -----------------
+
+$accordionmenu-arrows: true;
+//$accordionmenu-arrow-color: $primary-color;
+$accordionmenu-arrow-color: $menu-toggle-hover-active-color;
+```
+#### Update Dropdown Menu Stylings
+The fifth change was to modify the dropdown menu arrow color and border as shown starting on **line 314** below.
+```SCSS
+// 17. Dropdown Menu
+// -----------------
+
+$dropdownmenu-arrows: true;
+//$dropdownmenu-arrow-color: $anchor-color;
+$dropdownmenu-arrow-color: $menu-toggle-hover-active-color;
+$dropdownmenu-min-width: 200px;
+$dropdownmenu-background: $white;
+//$dropdownmenu-border: 1px solid $medium-gray;
+$dropdownmenu-border: 1px solid $menu-toggle-hover-active-color;
+```
+#### Update Orbit Styles
+The sixth change was to update the bullet styles as shown starting on **line 420** below.
+```SCSS
+// 25. Orbit
+// ---------
+
+//$orbit-bullet-background: $medium-gray;
+$orbit-bullet-background: $secondary-background-color;
+//$orbit-bullet-background-active: $dark-gray;
+$orbit-bullet-background-active: $menu-toggle-hover-active-color;
+$orbit-bullet-diameter: 1.2rem;
+$orbit-bullet-margin: 0.1rem;
+$orbit-bullet-margin-top: 0.8rem;
+$orbit-bullet-margin-bottom: 0.8rem;
+$orbit-caption-background: rgba($black, 0.5);
+$orbit-caption-padding: 1rem;
+$orbit-control-background-hover: rgba($black, 0.5);
+$orbit-control-padding: 1rem;
+$orbit-control-zindex: 10;
+```
+#### Update Title Bar Styles
+The Title Bar Background and Hover colors were modified to match the site styles as shown starting on **line 547** below.
+```SCSS
+// 34. Title Bar
+// -------------
+
+//$titlebar-background: $black;
+$titlebar-background: $secondary-background-color;
+$titlebar-color: $white;
+$titlebar-padding: 0.5rem;
+$titlebar-text-font-weight: bold;
+$titlebar-icon-color: $white;
+//$titlebar-icon-color-hover: $medium-gray;
+$titlebar-icon-color-hover: $menu-toggle-hover-active-color;
+$titlebar-icon-spacing: 0.25rem;
+```
+#### Update Top Bar Styles
+The topbar background was modified to match the site style as shown starting on **line 573** below.
+```SCSS
+// 36. Top Bar
+// -----------
+
+$topbar-padding: 0.5rem;
+//$topbar-background: $light-gray;
+$topbar-background: $secondary-background-color;
+$topbar-submenu-background: $topbar-background;
+$topbar-title-spacing: 1rem;
+$topbar-input-width: 200px;
+$topbar-unstack-breakpoint: medium;
+```
+
