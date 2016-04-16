@@ -496,6 +496,11 @@ Added color variables which are used later... The code snippet showing these del
 $sog-primary-color: #ED8F00;
 $sog-secondary-color: #a16100;
 ```
+#### Callout Modifications
+Updated the callout border as shown in the code snippet starting on **line 131** below.
+```SCSS
+$callout-border-sog-primary: 1px solid darken($sog-primary-color, 20%);
+```
 #### Overrides
 I included pre-defined variables in this file to override the previously set variables in the source SASS files... The code snippet starts on **line 150** and is shown below.
 ```SCSS
