@@ -362,7 +362,7 @@ As mentioned in the Navigation section above, the site incorporates the dropdown
 	</ul>
 </div>
 ```
-## SASS Modifications
+## SASS For Sites Modifications
 In order to customize the look of the site, there were several changes made to **_settings.scss** and **app.scss** as well as including several other partial files. These other partial files were from the P2 but were source files so I needed to some slight modifications to include them as partials.
 
 ### Changes to app.scss
@@ -487,3 +487,29 @@ $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
 ```
 
+## SASS For Email Modifications
+In order to get the email styles to match the site look, I needed to make some modifications to the SASS files.
+### Changes in _settings.scss
+#### Added Color Variables
+Added color variables which are used later... The code snippet showing these delcartions starting on **line 30** is shown below.
+```SCSS
+$sog-primary-color: #ED8F00;
+$sog-secondary-color: #a16100;
+```
+#### Overrides
+I included pre-defined variables in this file to override the previously set variables in the source SASS files... The code snippet starts on **line 150** and is shown below.
+```SCSS
+// 9. Mike's Overrides
+// -------------------
+$container-background: #EFECCA;
+$header-color: #61381D;
+$global-font-color: #BB6F39;
+$hr-border: 1px solid $sog-secondary-color;
+
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(https://fonts.googleapis.com/css?family=Francois+One);
+$google-font: Lato;
+$google-font2: 'Francois One';
+$body-font-family: $google-font;
+$header-font-family: $google-font2;
+```
