@@ -518,7 +518,7 @@ $body-font-family: $google-font;
 $header-font-family: $google-font2;
 ```
 ### Other style updates
-In addition to the variables in **_settings.scss*, I needed to update a few of the source partials.
+In addition to the variables in **_settings.scss**, I needed to update a few of the source partials.
 #### _button.scss
 Added code for another color ($sog-secondary-color) button. This is shown starting on **line 283** below.
 ```SCSS
