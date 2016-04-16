@@ -384,7 +384,7 @@ The first change was to include a partial file, **_variables.scss** to the top s
 @import 'variables';
 ```
 #### Update $foundation-palette
-The second change was to update `$foundation-palette` to include some of my custom colors for the buttons. This is shown starting on **line 52** below.
+The variable/list `$foundation-palette` was updated to include some of my custom colors for the buttons. This is shown starting on **line 52** below.
 ```SCSS
 $foundation-palette: (
   primary: #2199e8,
@@ -397,7 +397,7 @@ $foundation-palette: (
 );
 ```
 #### Update Breakpoints
-The third change was to update the breakpoints. This is shown starting on **line 84** below.
+The breakpoints variable/list was updated to include my custom breakpoints. This is shown starting on **line 84** below.
 ```SCSS
 $breakpoints: (
   small: 0,
@@ -413,7 +413,7 @@ $breakpoints: (
 $breakpoint-classes: (small medium medium_bk1 medium_bk2 large large_bk1 xlarge xlarge_bk1);
 ```
 #### Change Accordion Menu Arrow Color
-The fourth change was to change the accordion menu arrow color to match the style of the site as shown starting on **line 213** below.
+The accordion menu arrow color was updated to match the style of the site as shown starting on **line 213** below.
 ```SCSS
 // 8. Accordion Menu
 // -----------------
@@ -423,7 +423,7 @@ $accordionmenu-arrows: true;
 $accordionmenu-arrow-color: $menu-toggle-hover-active-color;
 ```
 #### Update Dropdown Menu Stylings
-The fifth change was to modify the dropdown menu arrow color and border as shown starting on **line 314** below.
+The dropdown menu arrow color and border was updated to match the site style as shown starting on **line 314** below.
 ```SCSS
 // 17. Dropdown Menu
 // -----------------
@@ -437,7 +437,7 @@ $dropdownmenu-background: $white;
 $dropdownmenu-border: 1px solid $menu-toggle-hover-active-color;
 ```
 #### Update Orbit Styles
-The sixth change was to update the bullet styles as shown starting on **line 420** below.
+The Orbit bullet styles were updated to match the site style as shown starting on **line 420** below.
 ```SCSS
 // 25. Orbit
 // ---------
