@@ -248,7 +248,7 @@ As mentioned earlier, each of the form pages utilize the **Abide** data validati
 </form>
 ```
 
-## Orbit
+### Orbit
 The Orbit gallery Javascript widget is implemented starting on **line 56** of **thepondgallery.php** as shown in the code snippet below.
 ```HTML
 <div class="orbit pondgallery" role="region" aria-label="Favorite Space Pictures" data-orbit>
@@ -316,7 +316,7 @@ $orbit-control-zindex: 10;
 ```
 Here you can see that I changed `$orbit-bullet-background` and `$orbit-bullet-background-active` to colors that matched my site. I also commented out the previous values as we were told to do in the videos.
 
-## Equalizer
+### Equalizer
 The Equalizer JavaScript widget is used throughout the site to make the column heights the same. Initially I had just used it for the photos and corresponding paragraph text in **photogallery.php** but I expanded the usage to all other pages too give the site a cleaner look so the column color extended all the way to the bottom (for example in any of the form pages such as **register.php**). The Equalizer code snippet starts on **line 55** of **photogallery.php** and is shown below.
 ```HTML
 <div class="row" data-equalizer>
@@ -340,5 +340,25 @@ The Equalizer JavaScript widget is used throughout the site to make the column h
 		<a href="#"><img src="img/sog-houses-300.jpg" alt="Our Houses"></a>
 		<p>We have many beautiful houses in our neighborhood. Please see pictures of the houses that our residents have shared.</p>
 	</div>
+</div>
+```
+### Dropdown/Accordion
+As mentioned in the Navigation section above, the site incorporates the dropdown/accordion elements in the navigation bar. The following code snippet shows the dropdown/accordion elements integrated into the navigation menu. Although the navigation menu is present on every page, the code shown below starts on **line 33** of **photogallery.php**.
+```HTML
+<div class="top-bar" id="nav-menu">
+	<ul class=" medium-horizontal vertical dropdown menu" data-responsive-menu="accordion medium-dropdown">
+		<li><a href="./index.php">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="./thingstodo.php">Things to Do</a></li>
+		<li class="active"><a href="./photogallery.php">Photo Gallery</a></li>
+		<!-- Login/Register is a dropdown menu and contains submenus for Login and Register -->
+		<li class="has-submenu"><a href="#">Login/Register</a>
+			<ul class="submenu menu vertical nested" data-submenu>
+				<li><a href="./login.php">Login</a></li>
+				<li><a href="./register.php">Register</a></li>
+			</ul>
+		</li>
+		<li><a href="./contact.php">Contact Us</a></li>
+	</ul>
 </div>
 ```
