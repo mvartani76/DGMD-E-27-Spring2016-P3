@@ -486,7 +486,6 @@ $topbar-title-spacing: 1rem;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
 ```
-
 ## SASS For Email Modifications
 In order to get the email styles to match the site look, I needed to make some modifications to the SASS files.
 ### Changes in _settings.scss
@@ -517,4 +516,48 @@ $google-font: Lato;
 $google-font2: 'Francois One';
 $body-font-family: $google-font;
 $header-font-family: $google-font2;
+```
+### Other style updates
+In addition to the variables in **_settings.scss*, I needed to update a few of the source partials.
+#### _button.scss
+Added code for another color ($sog-secondary-color) button. This is shown starting on **line 283** below.
+```SCSS
+// MCV Edit for SOG Color Button
+table.button.sog-secondary {
+  table {
+    td {
+      background: $sog-secondary-color;
+      border: 2px solid $sog-secondary-color;
+    }
+
+    a {
+      border: 0px solid $sog-secondary-color;
+    }
+  }
+}
+
+table.button.sog-secondary:hover {
+  table {
+    td {
+      background: darken($sog-secondary-color, 10%);
+    }
+
+    a {
+      border: 0px solid darken($sog-secondary-color, 10%);
+    }
+  }
+}
+```
+#### _callout.scss
+Added variable for and associated code to create a custom styled callout. The variable is declared on **line 17** as shown below.
+```SCSS
+$callout-background-fade-sog-primary: 10%;
+```
+And the additional code to set the sog-primary callout starts on **line 88** as shown below.
+```SCSS
+  &.sog-primary {
+    background: scale-color($sog-primary-color, $lightness: $callout-background-fade-sog-primary);
+    border: $callout-border-sog-primary;
+    color: $sog-secondary-color;
+  }
 ```
